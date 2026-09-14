@@ -1,0 +1,929 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found]){display:none!important}</style></head><body>
+<title>Trilha da Turma de Formação (Copy)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#F4F6F7; --surface:#FFFFFF; --surface-2:#EAEEF0;
+  --ink:#12191D; --ink-2:#3B4A52; --ink-3:#6C7C85;
+  --rule:#D7DEE1; --rule-soft:#E5EAEC; --rule-strong:#B9C5CA;
+  --accent:#0544A9; --accent-ink:#0544A9; --accent-soft:#E4EBF7;
+  --on-accent:#FFFFFF;
+  --opt-ink:#33506E; --opt:#33506E; --opt-soft:#E7ECF3;
+  --skip:#6C7C85;
+  --ok:#1B7A54;
+  --shadow:0 1px 2px rgba(18,25,29,.06), 0 8px 24px rgba(18,25,29,.05);
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --display:Archivo,"IBM Plex Sans",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E1417; --surface:#151D21; --surface-2:#1D272C;
+    --ink:#E8EEF0; --ink-2:#B4C3C9; --ink-3:#84969E;
+    --rule:#26333A; --rule-soft:#1E2A30; --rule-strong:#35464E;
+    --accent:#7BA6EE; --accent-ink:#9DBDF3; --accent-soft:#101C31;
+    --on-accent:#0E1417;
+    --opt-ink:#9DB6D6; --opt:#5C7EA8; --opt-soft:#16222F;
+    --skip:#7A8A92;
+    --ok:#4FBF92;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 28px rgba(0,0,0,.35);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0E1417; --surface:#151D21; --surface-2:#1D272C;
+  --ink:#E8EEF0; --ink-2:#B4C3C9; --ink-3:#84969E;
+  --rule:#26333A; --rule-soft:#1E2A30; --rule-strong:#35464E;
+  --accent:#7BA6EE; --accent-ink:#9DBDF3; --accent-soft:#101C31;
+  --on-accent:#0E1417;
+  --opt-ink:#9DB6D6; --opt:#5C7EA8; --opt-soft:#16222F;
+  --skip:#7A8A92;
+  --ok:#4FBF92;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 28px rgba(0,0,0,.35);
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-size:16px; line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:920px;margin:0 auto;padding:0 24px}
+a{color:var(--accent-ink)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+
+header.top{background:var(--surface);border-bottom:1px solid var(--rule);padding:44px 0 34px}
+.eyebrow{
+  font-family:var(--mono); font-size:12px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--ink-3); margin:0 0 14px;
+}
+h1{
+  font-family:var(--display); font-weight:800; font-size:clamp(34px,6vw,54px);
+  line-height:1.03; letter-spacing:-.02em; margin:0 0 14px; text-wrap:balance;
+}
+h1 .hl{color:var(--accent)}
+.lede{max-width:62ch;color:var(--ink-2);margin:0 0 26px;font-size:18px}
+.figures{display:flex;flex-wrap:wrap;gap:16px 40px;border-top:1px solid var(--rule-soft);padding-top:20px}
+.fig{display:flex;flex-direction:column;gap:2px}
+.fig b{font-family:var(--mono);font-weight:600;font-size:22px;font-variant-numeric:tabular-nums;letter-spacing:-.02em;color:var(--accent)}
+.fig span{font-size:12.5px;color:var(--ink-3);letter-spacing:.03em}
+
+h2{font-family:var(--display);font-weight:700;font-size:clamp(22px,3.4vw,30px);letter-spacing:-.01em;margin:0;text-wrap:balance}
+h3{font-family:var(--display);font-weight:700;font-size:17px;margin:0;letter-spacing:-.005em}
+section.part{margin-top:56px;scroll-margin-top:64px}
+.part-head{
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;
+  border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:6px;
+}
+.part-num{
+  font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);font-weight:600;flex:0 0 100%;
+}
+.part-time{
+  font-family:var(--mono);font-size:14px;font-variant-numeric:tabular-nums;
+  color:var(--ink-2);margin-left:auto;
+}
+.part-sub{font-size:14px;color:var(--ink-3);margin:10px 0 22px}
+.part-sub a{font-size:14px}
+
+.tablewrap{overflow-x:auto;border:1px solid var(--rule);border-radius:4px;background:var(--surface);box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;min-width:40rem;font-size:14px}
+th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--rule-soft)}
+thead th{
+  font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ink-3);background:var(--surface-2);
+  border-bottom:1px solid var(--rule);white-space:nowrap;
+}
+td.num,th.num{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+tbody tr:last-child td{border-bottom:1px solid var(--rule-soft)}
+tfoot td{border-top:1px solid var(--ink);border-bottom:none;font-weight:600;background:var(--surface-2)}
+
+ul.list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+li.row{
+  display:grid;grid-template-columns:2.4rem 17px 1fr auto 5.6rem;
+  align-items:baseline;gap:6px 14px;
+  padding:9px 10px;border-bottom:1px solid var(--rule-soft);border-radius:4px;
+  transition:background .15s ease;
+}
+li.row .n{font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums;color:var(--ink-3);text-align:right}
+li.row .t{text-decoration:none;font-size:15px;font-weight:500}
+li.row .t:hover{text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px}
+li.row .d{font-family:var(--mono);font-size:13.5px;font-variant-numeric:tabular-nums;color:var(--ink-2)}
+li.row .s{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;
+  padding:3px 7px;border-radius:2px;justify-self:start;white-space:nowrap;
+}
+li.row .why{grid-column:3 / -1;font-size:13px;color:var(--ink-3)}
+
+li.watch{background:linear-gradient(to right,var(--accent-soft),transparent 70%)}
+li.watch .t{color:var(--ink);font-weight:600}
+li.watch .n{color:var(--accent-ink)}
+li.watch .s{background:var(--accent);color:var(--on-accent)}
+
+li.opt .t{color:var(--ink);font-weight:500}
+li.opt .n{color:var(--opt-ink)}
+li.opt .s{background:var(--opt-soft);color:var(--opt-ink);box-shadow:inset 0 0 0 1px var(--opt)}
+
+li.skip .t{color:var(--ink-3);font-weight:400}
+li.skip .d{color:var(--ink-3)}
+li.skip .s{color:var(--skip);box-shadow:inset 0 0 0 1px var(--rule-strong)}
+
+.chapter{margin-top:26px}
+.chapter-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:5px 13px;padding:9px 10px 8px;border-bottom:1px solid var(--rule)}
+.chapter-head .cap{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.chapter-head .ctime{font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums;color:var(--ink-2);margin-left:auto}
+.chapter-head .cs{font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;padding:3px 7px;border-radius:2px}
+.chapter.on .chapter-head{border-bottom-color:var(--accent)}
+.chapter.on .cs{background:var(--accent);color:var(--on-accent)}
+.chapter.off .cs{color:var(--skip);box-shadow:inset 0 0 0 1px var(--rule-strong)}
+.chapter.off h3{color:var(--ink-2);font-weight:600}
+.chapter-head .why{font-size:13px;color:var(--ink-3);flex:0 0 100%;margin:3px 0 0}
+
+.note{
+  margin-top:26px;padding:16px 18px;background:var(--surface);
+  border:1px solid var(--rule);border-left:3px solid var(--accent);
+  font-size:14.5px;color:var(--ink-2);border-radius:0 4px 4px 0;box-shadow:var(--shadow);
+}
+.note b{color:var(--ink)}
+.note p{margin:6px 0}
+.legend{
+  display:flex;flex-wrap:wrap;gap:8px 18px;margin:24px 0 0;
+  padding-top:18px;border-top:1px solid var(--rule-soft);font-size:13px;color:var(--ink-2);
+}
+.k{font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;padding:3px 7px;border-radius:2px;margin-right:6px}
+.k1{background:var(--accent);color:var(--on-accent)}
+.k2{background:var(--opt-soft);color:var(--opt-ink);box-shadow:inset 0 0 0 1px var(--opt)}
+.k3{color:var(--skip);box-shadow:inset 0 0 0 1px var(--rule-strong)}
+
+footer{margin:64px 0 0;padding:20px 0 64px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink-3)}
+footer p{margin:8px 0;max-width:44rem}
+
+
+/* ---- progresso ---- */
+.progress{
+  position:sticky;top:0;z-index:5;
+  background:var(--surface);border-bottom:1px solid var(--rule);
+}
+.progress-inner{
+  max-width:920px;margin:0 auto;padding:10px 24px;
+  display:flex;align-items:center;gap:14px;
+}
+.bar{flex:1;height:6px;background:var(--surface-2);border-radius:99px;overflow:hidden}
+.bar span{display:block;height:100%;width:0;background:var(--accent);transition:width .25s ease}
+.count{font-family:var(--mono);font-size:12px;color:var(--ink-3);font-variant-numeric:tabular-nums;white-space:nowrap}
+.reset{
+  font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;
+  background:none;border:1px solid var(--rule-strong);color:var(--ink-3);
+  padding:4px 8px;border-radius:2px;cursor:pointer;
+}
+.reset:hover{color:var(--ink);border-color:var(--ink-2)}
+
+/* ---- checklist ---- */
+input[type=checkbox]{
+  appearance:none;-webkit-appearance:none;width:17px;height:17px;
+  border:1.5px solid var(--rule-strong);border-radius:3px;
+  background:var(--paper);cursor:pointer;position:relative;margin:0;flex:none;
+  align-self:center;
+}
+input[type=checkbox]:checked{background:var(--ok);border-color:var(--ok)}
+input[type=checkbox]:checked::after{
+  content:"";position:absolute;left:5px;top:1px;width:4px;height:9px;
+  border:solid #fff;border-width:0 2px 2px 0;transform:rotate(42deg);
+}
+input[type=checkbox]:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+li.row .nb{width:17px;height:17px}
+li.row.done{opacity:.62}
+li.row.done .t{text-decoration:line-through;text-decoration-color:var(--ink-3);color:var(--ink-3);font-weight:400}
+li.row.done.watch{background:none}
+
+@media (max-width:640px){
+  li.row{grid-template-columns:2.1rem 17px 1fr auto}
+  li.row .s{grid-column:3 / -1;margin-top:3px}
+  .part-time{margin-left:0;flex:0 0 100%}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <p class="eyebrow">Roteiro de estudo &middot; Curso em Vídeo</p>
+    <h1>Trilha da <span class="hl">Turma de Formação</span></h1>
+    <p class="lede">As sete playlists na ordem de estudo, vídeo a vídeo: o que assistir, o que pular e
+    quanto tempo cada etapa custa. Os tempos foram somados a partir da duração real de cada vídeo no YouTube.</p>
+    <div class="figures">
+      <div class="fig"><b>39h16</b><span>Obrigatório</span></div>
+      <div class="fig"><b>4h40</b><span>Opcional extra</span></div>
+      <div class="fig"><b>134</b><span>Vídeos obrigatórios</span></div>
+      <div class="fig"><b>7</b><span>Playlists</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="progress">
+  <div class="progress-inner">
+    <div class="bar"><span id="fill"></span></div>
+    <div class="count" id="count">0 / 0 concluídas</div>
+    <button class="reset" id="reset" type="button">Zerar</button>
+  </div>
+</div>
+
+
+<div class="wrap">
+
+<section style="margin-top:2.5rem">
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Etapa</th>
+          <th class="num">Vídeos</th>
+          <th class="num">Obrigatório</th>
+          <th class="num">Opcional</th>
+          <th class="num">Acumulado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1 &middot; Git e GitHub</td><td class="num">5</td><td class="num">3h20min09s</td><td class="num">&mdash;</td><td class="num">3h20min</td></tr>
+        <tr><td>2 &middot; HTML5/CSS3 &mdash; Módulo 1</td><td class="num">16</td><td class="num">3h46min42s</td><td class="num">+12min19s</td><td class="num">7h07min</td></tr>
+        <tr><td>3 &middot; HTML5/CSS3 &mdash; Módulo 2</td><td class="num">19</td><td class="num">4h58min01s</td><td class="num">+2h38min38s</td><td class="num">12h05min</td></tr>
+        <tr><td>4 &middot; HTML5/CSS3 &mdash; Módulo 3</td><td class="num">14</td><td class="num">2h21min40s</td><td class="num">&mdash;</td><td class="num">14h27min</td></tr>
+        <tr><td>5 &middot; HTML5/CSS3 &mdash; Módulo 4</td><td class="num">29</td><td class="num">6h54min04s</td><td class="num">&mdash;</td><td class="num">21h21min</td></tr>
+        <tr><td>6 &middot; HTML5/CSS3 &mdash; Módulo 5</td><td class="num">32</td><td class="num">10h08min57s</td><td class="num">&mdash;</td><td class="num">31h30min</td></tr>
+        <tr><td>7 &middot; JavaScript</td><td class="num">19</td><td class="num">7h46min33s</td><td class="num">+1h48min46s</td><td class="num">39h16min</td></tr>
+      </tbody>
+      <tfoot>
+        <tr><td>Total</td><td class="num">134</td><td class="num">39h16min06s</td><td class="num">+4h39min43s</td><td class="num">43h55min49s</td></tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <div class="legend">
+    <div><span class="k k1">assistir</span>faz parte da trilha</div>
+    <div><span class="k k2">opcional</span>enriquece, não bloqueia</div>
+    <div><span class="k k3">pular</span>fora do escopo da turma</div>
+  </div>
+</section>
+
+<!-- ===================== PARTE 1 ===================== -->
+<section class="part">
+  <div class="part-head">
+    <span class="part-num">Parte 1 &middot; 5 vídeos para assistir</span>
+    <h2>Git e GitHub</h2>
+    <span class="part-time">3h20min09s</span>
+  </div>
+  <p class="part-sub">13 vídeos na playlist &middot; <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA">abrir playlist completa</a></p>
+  <ul class="list">
+    <li class="row skip"><span class="n">1</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=xEKo29OWILE&list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA">O que é Git? O que é versionamento?</a><span class="d">30:26</span><span class="s">pular</span><span class="why">História do Git e para que serve.</span></li>
+    <li class="row skip"><span class="n">2</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=hcZ0qtwvN1w&list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA">O que é GitHub? Pra que ele serve?</a><span class="d">37:40</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">3</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=CJtrNuTTs4Q&list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA">A Evolução do Git e GitHub</a><span class="d">43:27</span><span class="s">pular</span></li>
+    <li class="row watch"><span class="n">4</span><input type="checkbox" data-id="gMh6lrXibWY" aria-label="Concluir: Instalações e configurações importantes"><a class="t" href="https://www.youtube.com/watch?v=gMh6lrXibWY&list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA">Instalações e configurações importantes</a><span class="d">1:01:19</span><span class="s">assistir</span><span class="why">Instalação do Git e do GitHub.</span></li>
+    <li class="row watch"><span class="n">5</span><input type="checkbox" data-id="5BYm7UdCrX0" aria-label="Concluir: Criando o primeiro Repositório"><a class="t" href="https://www.youtube.com/watch?v=5BYm7UdCrX0&list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA">Criando o primeiro Repositório</a><span class="d">34:22</span><span class="s">assistir</span><span class="why">GitHub Desktop: o caminho mais fácil para entender o fluxo de Git no projeto.</span></li>
+    <li class="row skip"><span class="n">6</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=CSyEYiG8sFI&list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA">Instalando GitHub Desktop no Linux</a><span class="d">43:38</span><span class="s">pular</span><span class="why">Específico de Linux.</span></li>
+    <li class="row watch"><span class="n">7</span><input type="checkbox" data-id="OlArEishhQg" aria-label="Concluir: Clonando um Repositório"><a class="t" href="https://www.youtube.com/watch?v=OlArEishhQg&list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA">Clonando um Repositório</a><span class="d">27:35</span><span class="s">assistir</span></li>
+    <li class="row watch"><span class="n">8</span><input type="checkbox" data-id="065NQCDSMb0" aria-label="Concluir: Versionando seus projetos antigos"><a class="t" href="https://www.youtube.com/watch?v=065NQCDSMb0&list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA">Versionando seus projetos antigos</a><span class="d">27:16</span><span class="s">assistir</span></li>
+    <li class="row skip"><span class="n">9</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=mUZOySyVcuQ&list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA">Você sabe usar Issues?</a><span class="d">40:48</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">10</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=LntSB-gl-ZI&list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA">Guia da Linguagem Markdown</a><span class="d">51:32</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">11</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=bsI6P_IM_hg&list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA">Seu GitHub muito mais seguro</a><span class="d">32:25</span><span class="s">pular</span></li>
+    <li class="row watch"><span class="n">12</span><input type="checkbox" data-id="xAOBQtSVI_k" aria-label="Concluir: Git Branches de forma fácil e com exemplo"><a class="t" href="https://www.youtube.com/watch?v=xAOBQtSVI_k&list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA">Git Branches de forma fácil e com exemplo</a><span class="d">49:37</span><span class="s">assistir</span><span class="why">Branches, merge e resolução de conflitos.</span></li>
+    <li class="row skip"><span class="n">13</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=2Y0HXnYpn9E&list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA">Hospedagem Grátis no GitHub Pages</a><span class="d">35:55</span><span class="s">pular</span></li>
+  </ul>
+</section>
+
+<!-- ===================== PARTE 2 ===================== -->
+<section class="part">
+  <div class="part-head">
+    <span class="part-num">Parte 2 &middot; 16 vídeos + 1 opcional</span>
+    <h2>HTML5/CSS3 &mdash; Módulo 1</h2>
+    <span class="part-time">3h46min42s <span style="color:var(--opt-ink)">(3h59min01s com opcional)</span></span>
+  </div>
+  <p class="part-sub">41 vídeos na playlist &middot; <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">abrir playlist completa</a></p>
+  <ul class="list">
+    <li class="row skip"><span class="n">1</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=Ejkb_YpuHWs&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Começa aqui o novo Curso em Vídeo de HTML5 e CSS3</a><span class="d">2:24</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">2</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=jgQjeqGRdgA&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">O que vamos aprender no módulo 01?</a><span class="d">7:52</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">3</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=VfIXgGJWLvA&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Precisamos fazer um acordo</a><span class="d">19:26</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">4</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=57wyfS560Uk&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Será que este curso é para mim?</a><span class="d">15:34</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">5</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=0zLjVhHdOm8&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Melhores livros para aprender HTML5 e CSS3</a><span class="d">20:55</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">6</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=F74GKCLXUWM&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Como a Internet chega na minha casa?</a><span class="d">27:01</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">7</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=nlO5hySqJFA&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Como a Internet funciona?</a><span class="d">22:15</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">8</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=RFHSt1PCy0k&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">O que é domínio e hospedagem?</a><span class="d">19:38</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">9</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=B4FU3NFRTDw&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">A diferença entre HTML, CSS e JavaScript</a><span class="d">26:33</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">10</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=iSqf2iPqJNM&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Front-end, Back-end e Full stack</a><span class="d">19:22</span><span class="s">pular</span></li>
+    <li class="row watch"><span class="n">11</span><input type="checkbox" data-id="UForX7ehChM" aria-label="Concluir: Instalando todas as ferramentas"><a class="t" href="https://www.youtube.com/watch?v=UForX7ehChM&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Instalando todas as ferramentas</a><span class="d">13:44</span><span class="s">assistir</span></li>
+    <li class="row watch"><span class="n">12</span><input type="checkbox" data-id="E6CdIawPTh0" aria-label="Concluir: Seu primeiro código HTML"><a class="t" href="https://www.youtube.com/watch?v=E6CdIawPTh0&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Seu primeiro código HTML</a><span class="d">17:34</span><span class="s">assistir</span><span class="why">Organização de pastas, estrutura base do HTML, tags de conteúdo, visualização no navegador, linhas horizontais.</span></li>
+    <li class="row watch"><span class="n">13</span><input type="checkbox" data-id="f6NTJdtEFOc" aria-label="Concluir: Parágrafos e Quebras"><a class="t" href="https://www.youtube.com/watch?v=f6NTJdtEFOc&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Parágrafos e Quebras</a><span class="d">10:26</span><span class="s">assistir</span><span class="why">Parágrafos, quebra de linha e caracteres especiais.</span></li>
+    <li class="row skip"><span class="n">14</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=nhMdFe3WwYc&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Símbolos e Emoji no seu site</a><span class="d">12:59</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">15</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=bDULqeGEvAw&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Você tem o direito de usar qualquer imagem no seu site?</a><span class="d">10:40</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">16</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=xg-vHgLF0mI&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Quais são os formatos para imagens na Web?</a><span class="d">15:50</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">17</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=8rkuukKA8a4&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">O tamanho das imagens importa para um site?</a><span class="d">15:58</span><span class="s">pular</span></li>
+    <li class="row watch"><span class="n">18</span><input type="checkbox" data-id="CwOmEetWMnU" aria-label="Concluir: A tag img em HTML5"><a class="t" href="https://www.youtube.com/watch?v=CwOmEetWMnU&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">A tag img em HTML5</a><span class="d">17:34</span><span class="s">assistir</span><span class="why">Inserir imagem.</span></li>
+    <li class="row watch"><span class="n">19</span><input type="checkbox" data-id="1ZeettFfxys" aria-label="Concluir: Como mudar o favicon de um site"><a class="t" href="https://www.youtube.com/watch?v=1ZeettFfxys&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Como mudar o favicon de um site</a><span class="d">15:50</span><span class="s">assistir</span></li>
+    <li class="row watch"><span class="n">20</span><input type="checkbox" data-id="aiOEBhozEOg" aria-label="Concluir: Hierarquia de Títulos"><a class="t" href="https://www.youtube.com/watch?v=aiOEBhozEOg&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Hierarquia de Títulos</a><span class="d">15:44</span><span class="s">assistir</span></li>
+    <li class="row watch"><span class="n">21</span><input type="checkbox" data-id="HaSgt1hK2Fs" aria-label="Concluir: Semântica na HTML5 é importante"><a class="t" href="https://www.youtube.com/watch?v=HaSgt1hK2Fs&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Semântica na HTML5 é importante</a><span class="d">15:23</span><span class="s">assistir</span></li>
+    <li class="row opt"><span class="n">22</span><input type="checkbox" data-id="T-d_hsO3hUI" aria-label="Concluir: Negrito e Itálico do jeito certo"><a class="t" href="https://www.youtube.com/watch?v=T-d_hsO3hUI&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Negrito e Itálico do jeito certo</a><span class="d">12:19</span><span class="s">opcional</span></li>
+    <li class="row skip"><span class="n">23</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=8TgKFYkcO5Y&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Formatações adicionais em HTML</a><span class="d">15:46</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">24</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=4ynvsrkamt8&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Citações e Códigos</a><span class="d">19:26</span><span class="s">pular</span></li>
+    <li class="row watch"><span class="n">25</span><input type="checkbox" data-id="JlE0pzESf5g" aria-label="Concluir: Listas OL e UL"><a class="t" href="https://www.youtube.com/watch?v=JlE0pzESf5g&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Listas OL e UL</a><span class="d">12:32</span><span class="s">assistir</span></li>
+    <li class="row watch"><span class="n">26</span><input type="checkbox" data-id="Ez1kgIyoGuE" aria-label="Concluir: Listas mistas e de definição"><a class="t" href="https://www.youtube.com/watch?v=Ez1kgIyoGuE&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Listas mistas e de definição</a><span class="d">12:04</span><span class="s">assistir</span></li>
+    <li class="row watch"><span class="n">27</span><input type="checkbox" data-id="LeOVXQDsAIY" aria-label="Concluir: Links e Âncoras em HTML5"><a class="t" href="https://www.youtube.com/watch?v=LeOVXQDsAIY&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Links e Âncoras em HTML5</a><span class="d">12:30</span><span class="s">assistir</span></li>
+    <li class="row watch"><span class="n">28</span><input type="checkbox" data-id="LeLnlT-ZKw8" aria-label="Concluir: Links internos"><a class="t" href="https://www.youtube.com/watch?v=LeLnlT-ZKw8&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Links internos</a><span class="d">15:08</span><span class="s">assistir</span></li>
+    <li class="row watch"><span class="n">29</span><input type="checkbox" data-id="Jszz7M676y8" aria-label="Concluir: Links para download"><a class="t" href="https://www.youtube.com/watch?v=Jszz7M676y8&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Links para download</a><span class="d">8:55</span><span class="s">assistir</span></li>
+    <li class="row skip"><span class="n">30</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=suL56Mdx22Y&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Desafios propostos</a><span class="d">5:48</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">31</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=E01LDVj0Rpg&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Imagens Dinâmicas</a><span class="d">16:31</span><span class="s">pular</span></li>
+    <li class="row watch"><span class="n">32</span><input type="checkbox" data-id="cAgkwPWE4hU" aria-label="Concluir: Imagens que se adaptam sozinhas"><a class="t" href="https://www.youtube.com/watch?v=cAgkwPWE4hU&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Imagens que se adaptam sozinhas</a><span class="d">13:27</span><span class="s">assistir</span></li>
+    <li class="row skip"><span class="n">33</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=4OZYsFl-J9s&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Colocando áudio no seu site</a><span class="d">16:32</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">34</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=DjOSM72cYac&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Formatos de vídeo para seu site</a><span class="d">12:50</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">35</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=TCeyIwFGkYo&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Vídeos em hospedagem própria</a><span class="d">12:30</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">36</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=3hng-hmSv2Y&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Incorporação de vídeos externos</a><span class="d">14:06</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">37</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=gqrySQQzvvQ&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Desafio: um site com vídeos</a><span class="d">5:52</span><span class="s">pular</span></li>
+    <li class="row watch"><span class="n">38</span><input type="checkbox" data-id="byqhpuVpvEI" aria-label="Concluir: Estilos CSS inline"><a class="t" href="https://www.youtube.com/watch?v=byqhpuVpvEI&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Estilos CSS inline</a><span class="d">16:13</span><span class="s">assistir</span></li>
+    <li class="row watch"><span class="n">39</span><input type="checkbox" data-id="fzyab4P2pn8" aria-label="Concluir: Estilos CSS internos"><a class="t" href="https://www.youtube.com/watch?v=fzyab4P2pn8&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Estilos CSS internos</a><span class="d">12:33</span><span class="s">assistir</span></li>
+    <li class="row watch"><span class="n">40</span><input type="checkbox" data-id="-i1JVMspDJQ" aria-label="Concluir: Estilos CSS externos"><a class="t" href="https://www.youtube.com/watch?v=-i1JVMspDJQ&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Estilos CSS externos</a><span class="d">17:05</span><span class="s">assistir</span></li>
+    <li class="row skip"><span class="n">41</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=xYLizixflv4&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Fim do Módulo 1: Certificados liberados</a><span class="d">18:06</span><span class="s">pular</span></li>
+  </ul>
+</section>
+
+<!-- ===================== PARTE 3 ===================== -->
+<section class="part">
+  <div class="part-head">
+    <span class="part-num">Parte 3 &middot; 19 vídeos + 9 opcionais</span>
+    <h2>HTML5/CSS3 &mdash; Módulo 2</h2>
+    <span class="part-time">4h58min01s <span style="color:var(--opt-ink)">(7h36min39s com opcionais)</span></span>
+  </div>
+  <p class="part-sub">43 vídeos na playlist &middot; <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">abrir playlist completa</a></p>
+  <ul class="list">
+    <li class="row skip"><span class="n">1</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=vPNIAJ9B4hg&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">O que vamos aprender no módulo 02?</a><span class="d">13:47</span><span class="s">pular</span></li>
+    <li class="row opt"><span class="n">2</span><input type="checkbox" data-id="A8UNBs7nxw4" aria-label="Concluir: Psicologia das Cores"><a class="t" href="https://www.youtube.com/watch?v=A8UNBs7nxw4&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Psicologia das Cores</a><span class="d">24:14</span><span class="s">opcional</span></li>
+    <li class="row watch"><span class="n">3</span><input type="checkbox" data-id="uKjKnztS3cY" aria-label="Concluir: Representando Cores com CSS3"><a class="t" href="https://www.youtube.com/watch?v=uKjKnztS3cY&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Representando Cores com CSS3</a><span class="d">20:46</span><span class="s">assistir</span></li>
+    <li class="row opt"><span class="n">4</span><input type="checkbox" data-id="E2gaDa4ZaTc" aria-label="Concluir: Harmonia de cores"><a class="t" href="https://www.youtube.com/watch?v=E2gaDa4ZaTc&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Harmonia de cores</a><span class="d">25:08</span><span class="s">opcional</span></li>
+    <li class="row opt"><span class="n">5</span><input type="checkbox" data-id="KC8dm9OvIOU" aria-label="Concluir: Paleta de cores"><a class="t" href="https://www.youtube.com/watch?v=KC8dm9OvIOU&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Paleta de cores</a><span class="d">18:59</span><span class="s">opcional</span></li>
+    <li class="row skip"><span class="n">6</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=Swh0Yt2s5Zs&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Como capturar cores da tela?</a><span class="d">10:17</span><span class="s">pular</span></li>
+    <li class="row opt"><span class="n">7</span><input type="checkbox" data-id="_P-guJX-TtU" aria-label="Concluir: Como criar degradê com CSS?"><a class="t" href="https://www.youtube.com/watch?v=_P-guJX-TtU&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Como criar degradê com CSS?</a><span class="d">13:45</span><span class="s">opcional</span></li>
+    <li class="row skip"><span class="n">8</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=reFQrqxOzsg&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Criando um exemplo real</a><span class="d">15:57</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">9</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=m54omTveWa8&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Primeiros passos em Tipografia</a><span class="d">17:00</span><span class="s">pular</span></li>
+    <li class="row opt"><span class="n">10</span><input type="checkbox" data-id="YZfzstEquas" aria-label="Concluir: Anatomia do tipo"><a class="t" href="https://www.youtube.com/watch?v=YZfzstEquas&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Anatomia do tipo</a><span class="d">25:11</span><span class="s">opcional</span></li>
+    <li class="row watch"><span class="n">11</span><input type="checkbox" data-id="dMp1UFD8_lE" aria-label="Concluir: Famílias de fonte com CSS"><a class="t" href="https://www.youtube.com/watch?v=dMp1UFD8_lE&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Famílias de fonte com CSS</a><span class="d">12:23</span><span class="s">assistir</span></li>
+    <li class="row watch"><span class="n">12</span><input type="checkbox" data-id="NGfPXJGiNH8" aria-label="Concluir: Tamanho de fonte e suas medidas"><a class="t" href="https://www.youtube.com/watch?v=NGfPXJGiNH8&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Tamanho de fonte e suas medidas</a><span class="d">12:25</span><span class="s">assistir</span></li>
+    <li class="row watch"><span class="n">13</span><input type="checkbox" data-id="oHj5ez1bSkc" aria-label="Concluir: Peso, estilo e shorthand font"><a class="t" href="https://www.youtube.com/watch?v=oHj5ez1bSkc&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Peso, estilo e shorthand font</a><span class="d">13:36</span><span class="s">assistir</span></li>
+    <li class="row opt"><span class="n">14</span><input type="checkbox" data-id="FLuQonci9wU" aria-label="Concluir: Usando Google Fonts"><a class="t" href="https://www.youtube.com/watch?v=FLuQonci9wU&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Usando Google Fonts</a><span class="d">15:23</span><span class="s">opcional</span></li>
+    <li class="row skip"><span class="n">15</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=3YIXnxA1kqg&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Usando fontes externas baixadas</a><span class="d">14:09</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">16</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=XTtfM0L7Co0&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Capturando as fontes usadas em um site</a><span class="d">12:06</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">17</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=i_c5Fzk807M&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Detectando fontes dentro de imagens</a><span class="d">12:31</span><span class="s">pular</span></li>
+    <li class="row watch"><span class="n">18</span><input type="checkbox" data-id="tJTtp4qyqdE" aria-label="Concluir: Alinhamento de textos com CSS"><a class="t" href="https://www.youtube.com/watch?v=tJTtp4qyqdE&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Alinhamento de textos com CSS</a><span class="d">9:17</span><span class="s">assistir</span></li>
+    <li class="row watch"><span class="n">19</span><input type="checkbox" data-id="TZuVpJmSNSE" aria-label="Concluir: Usando o id com CSS"><a class="t" href="https://www.youtube.com/watch?v=TZuVpJmSNSE&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Usando o id com CSS</a><span class="d">13:02</span><span class="s">assistir</span></li>
+    <li class="row watch"><span class="n">20</span><input type="checkbox" data-id="zXfTjPrMC_0" aria-label="Concluir: As diferenças entre id e class"><a class="t" href="https://www.youtube.com/watch?v=zXfTjPrMC_0&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">As diferenças entre id e class</a><span class="d">13:21</span><span class="s">assistir</span></li>
+    <li class="row watch"><span class="n">21</span><input type="checkbox" data-id="WPtRX4n0UJs" aria-label="Concluir: Pseudo-classes em CSS"><a class="t" href="https://www.youtube.com/watch?v=WPtRX4n0UJs&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Pseudo-classes em CSS</a><span class="d">13:56</span><span class="s">assistir</span></li>
+    <li class="row watch"><span class="n">22</span><input type="checkbox" data-id="vMlrcOVr7po" aria-label="Concluir: Pseudo-elementos em CSS"><a class="t" href="https://www.youtube.com/watch?v=vMlrcOVr7po&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Pseudo-elementos em CSS</a><span class="d">13:32</span><span class="s">assistir</span></li>
+    <li class="row watch"><span class="n">23</span><input type="checkbox" data-id="3ZFYXkzXhqE" aria-label="Concluir: Modelo de Caixas: primeiros passos"><a class="t" href="https://www.youtube.com/watch?v=3ZFYXkzXhqE&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Modelo de Caixas: primeiros passos</a><span class="d">16:35</span><span class="s">assistir</span></li>
+    <li class="row watch"><span class="n">24</span><input type="checkbox" data-id="rXF1okX0v9E" aria-label="Concluir: Modelo de Caixas na prática (parte 1)"><a class="t" href="https://www.youtube.com/watch?v=rXF1okX0v9E&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Modelo de Caixas na prática (parte 1)</a><span class="d">20:08</span><span class="s">assistir</span></li>
+    <li class="row watch"><span class="n">25</span><input type="checkbox" data-id="-CPoDvZLQ6k" aria-label="Concluir: Modelo de Caixas na prática (parte 2)"><a class="t" href="https://www.youtube.com/watch?v=-CPoDvZLQ6k&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Modelo de Caixas na prática (parte 2)</a><span class="d">19:02</span><span class="s">assistir</span></li>
+    <li class="row watch"><span class="n">26</span><input type="checkbox" data-id="JPMm-jyKOaM" aria-label="Concluir: Grouping Tags em HTML5"><a class="t" href="https://www.youtube.com/watch?v=JPMm-jyKOaM&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Grouping Tags em HTML5</a><span class="d">15:18</span><span class="s">assistir</span></li>
+    <li class="row opt"><span class="n">27</span><input type="checkbox" data-id="JACiDRNWjjQ" aria-label="Concluir: Sombra nas Caixas"><a class="t" href="https://www.youtube.com/watch?v=JACiDRNWjjQ&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Sombra nas Caixas</a><span class="d">14:06</span><span class="s">opcional</span></li>
+    <li class="row opt"><span class="n">28</span><input type="checkbox" data-id="PGIrTzQqpqo" aria-label="Concluir: Caixas com vértices arredondados"><a class="t" href="https://www.youtube.com/watch?v=PGIrTzQqpqo&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Caixas com vértices arredondados</a><span class="d">9:46</span><span class="s">opcional</span></li>
+    <li class="row opt"><span class="n">29</span><input type="checkbox" data-id="n0rjAs_Im4w" aria-label="Concluir: Bordas decoradas"><a class="t" href="https://www.youtube.com/watch?v=n0rjAs_Im4w&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Bordas decoradas</a><span class="d">12:06</span><span class="s">opcional</span></li>
+    <li class="row skip"><span class="n">30</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=xS2D9x8odoE&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">DESAFIO do Módulo 2</a><span class="d">7:40</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">31</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=cKEA0-MOhOs&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Criando um projeto a partir do zero</a><span class="d">9:58</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">32</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=YB9c1Zg_Ln4&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Navegando pelo projeto pronto</a><span class="d">9:17</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">33</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=Zju-c3YWgSg&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Planejando a estrutura do seu site</a><span class="d">15:32</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">34</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=D7jnoo7UHKE&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Transformando o layout em código</a><span class="d">17:33</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">35</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=I_vi2q6sC1k&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Organizando o conteúdo do site</a><span class="d">20:56</span><span class="s">pular</span></li>
+    <li class="row watch"><span class="n">36</span><input type="checkbox" data-id="3S5ts5bzvzM" aria-label="Concluir: Variáveis em CSS"><a class="t" href="https://www.youtube.com/watch?v=3S5ts5bzvzM&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Variáveis em CSS</a><span class="d">19:59</span><span class="s">assistir</span></li>
+    <li class="row watch"><span class="n">37</span><input type="checkbox" data-id="WcGPSeuJDJ0" aria-label="Concluir: Responsividade para sites"><a class="t" href="https://www.youtube.com/watch?v=WcGPSeuJDJ0&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Responsividade para sites</a><span class="d">20:19</span><span class="s">assistir</span></li>
+    <li class="row watch"><span class="n">38</span><input type="checkbox" data-id="rAdHLNBTCgs" aria-label="Concluir: Responsividade na prática"><a class="t" href="https://www.youtube.com/watch?v=rAdHLNBTCgs&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Responsividade na prática</a><span class="d">14:24</span><span class="s">assistir</span></li>
+    <li class="row watch"><span class="n">39</span><input type="checkbox" data-id="TrfhQwSYCEk" aria-label="Concluir: Configurando o header e o menu do site"><a class="t" href="https://www.youtube.com/watch?v=TrfhQwSYCEk&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Configurando o header e o menu do site</a><span class="d">15:59</span><span class="s">assistir</span></li>
+    <li class="row watch"><span class="n">40</span><input type="checkbox" data-id="_KglicHxv3g" aria-label="Concluir: Melhorando o formato do conteúdo"><a class="t" href="https://www.youtube.com/watch?v=_KglicHxv3g&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Melhorando o formato do conteúdo</a><span class="d">17:01</span><span class="s">assistir</span></li>
+    <li class="row watch"><span class="n">41</span><input type="checkbox" data-id="pdomr7thueI" aria-label="Concluir: Rodapé, conteúdo periférico e links"><a class="t" href="https://www.youtube.com/watch?v=pdomr7thueI&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Rodapé, conteúdo periférico e links</a><span class="d">16:58</span><span class="s">assistir</span></li>
+    <li class="row skip"><span class="n">42</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=u9NE0jInb_c&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Tornando um vídeo responsivo</a><span class="d">14:26</span><span class="s">pular</span></li>
+    <li class="row skip"><span class="n">43</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=V502R5sbIh4&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s">Fim do Módulo 2: certificados liberados</a><span class="d">16:58</span><span class="s">pular</span></li>
+  </ul>
+</section>
+
+<!-- ===================== PARTE 4 ===================== -->
+<section class="part">
+  <div class="part-head">
+    <span class="part-num">Parte 4 &middot; 1 capítulo de 5</span>
+    <h2>HTML5/CSS3 &mdash; Módulo 3</h2>
+    <span class="part-time">2h21min40s</span>
+  </div>
+  <p class="part-sub">40 vídeos na playlist, agrupados por capítulo &middot; <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">abrir playlist completa</a></p>
+
+  <div class="chapter off">
+    <div class="chapter-head">
+      <span class="cap">Abertura</span>
+      <h3>Vídeo de introdução</h3>
+      <span class="cs">pular</span>
+      <span class="ctime">8min40s</span>
+    </div>
+    <ul class="list">
+      <li class="row skip"><span class="n">1</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=ofFgnDtn_1c&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">O que vamos aprender no módulo 3?</a><span class="d">8:40</span><span class="s">pular</span></li>
+    </ul>
+  </div>
+
+  <div class="chapter off">
+    <div class="chapter-head">
+      <span class="cap">Capítulo 18</span>
+      <h3>Git e GitHub</h3>
+      <span class="cs">pular</span>
+      <span class="ctime">2h14min47s</span>
+      <p class="why">Git e GitHub são cobertos pela Parte 1, na playlist dedicada.</p>
+    </div>
+    <ul class="list">
+      <li class="row skip"><span class="n">2</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=GDGMf2bnHlE&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">O que é Git e GitHub?</a><span class="d">15:07</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">3</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=NgWExh3bswg&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Instalando Git e GitHub no PC</a><span class="d">10:05</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">4</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=1QTi8nIlK1o&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Criando conta no GitHub</a><span class="d">12:37</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">5</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=P0Hvrf8T3zo&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Primeiro repositório git e GitHub</a><span class="d">14:23</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">6</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=Sbcu_GuySjo&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Gerenciando Repositórios GitHub</a><span class="d">16:41</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">7</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=_jI3782DGDc&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Hospedando site gratuitamente com GitHub Pages</a><span class="d">15:03</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">8</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=ejQwG2cvWxg&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Manutenção em sites hospedados no GitHub Pages</a><span class="d">9:10</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">9</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=g5orqzMzwkY&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Recursos Sociais do GitHub</a><span class="d">15:59</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">10</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=sRBSr9X5nAQ&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Clonando Repositórios GitHub</a><span class="d">10:40</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">11</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=c-MATEcIuPQ&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">GitHub em vários PCs</a><span class="d">15:02</span><span class="s">pular</span></li>
+    </ul>
+  </div>
+
+  <div class="chapter off">
+    <div class="chapter-head">
+      <span class="cap">Capítulo 19</span>
+      <h3>background-image</h3>
+      <span class="cs">pular</span>
+      <span class="ctime">1h33min58s</span>
+      <p class="why">Não é algo que utilizamos no dia a dia.</p>
+    </div>
+    <ul class="list">
+      <li class="row skip"><span class="n">12</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=sms5H5cKDy4&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Download das imagens do capítulo</a><span class="d">9:09</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">13</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=9hV5oXi80-A&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Colocando uma imagem de fundo no seu site</a><span class="d">15:31</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">14</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=_5KoMUMCTG0&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Imagens que se repetem no fundo do site</a><span class="d">10:01</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">15</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=RpcmGqvzWxQ&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Configurando a posição da imagem no fundo do site</a><span class="d">17:31</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">16</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=lNaoi5AUCsc&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Mudando o tamanho da imagem de fundo do site</a><span class="d">16:23</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">17</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=PzJwwA6LVts&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">background-attachment e shorthand</a><span class="d">11:11</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">18</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=-w0Qo_qQiRg&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Centralização vertical de caixas</a><span class="d">14:12</span><span class="s">pular</span></li>
+    </ul>
+  </div>
+
+  <div class="chapter off">
+    <div class="chapter-head">
+      <span class="cap">Capítulo 20</span>
+      <h3>Projeto Cordel</h3>
+      <span class="cs">pular</span>
+      <span class="ctime">1h22min36s</span>
+      <p class="why">A prática vem do projeto Operação Curiosidade, aplicado em paralelo.</p>
+    </div>
+    <ul class="list">
+      <li class="row skip"><span class="n">19</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=cz7AoKGcwlY&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Um projeto completo usando HTML e CSS</a><span class="d">9:24</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">20</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=V8kF1WZisbg&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Download e organização dos arquivos</a><span class="d">7:35</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">21</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=e-HB90dx_CI&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Ajustes no HTML do projeto</a><span class="d">13:59</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">22</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=82vIYws5wF8&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Ajustes no CSS do projeto</a><span class="d">16:03</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">23</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=0bBBaHNkzVE&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Colocando as fontes ao projeto</a><span class="d">14:54</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">24</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=UnYur3GqcDc&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Imagens com efeito Parallax simples</a><span class="d">11:06</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">25</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=78hBqKLaWCU&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Hospedando o Projeto Cordel gratuitamente</a><span class="d">9:35</span><span class="s">pular</span></li>
+    </ul>
+  </div>
+
+  <div class="chapter on">
+    <div class="chapter-head">
+      <span class="cap">Capítulo 21</span>
+      <h3>Tabelas</h3>
+      <span class="cs">assistir</span>
+      <span class="ctime">2h21min40s &middot; 14 vídeos</span>
+    </div>
+    <ul class="list">
+      <li class="row watch"><span class="n">26</span><input type="checkbox" data-id="9IF4xvg5rWI" aria-label="Concluir: Ainda podemos usar tabelas em HTML?"><a class="t" href="https://www.youtube.com/watch?v=9IF4xvg5rWI&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Ainda podemos usar tabelas em HTML?</a><span class="d">7:31</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">27</span><input type="checkbox" data-id="lIiZu-94PBk" aria-label="Concluir: Sua primeira tabela em HTML"><a class="t" href="https://www.youtube.com/watch?v=lIiZu-94PBk&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Sua primeira tabela em HTML</a><span class="d">17:58</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">28</span><input type="checkbox" data-id="djvX6p9l-Rk" aria-label="Concluir: Alinhando o conteúdo em tabelas"><a class="t" href="https://www.youtube.com/watch?v=djvX6p9l-Rk&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Alinhando o conteúdo em tabelas</a><span class="d">7:52</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">29</span><input type="checkbox" data-id="XmrNuqmmckM" aria-label="Concluir: Aprendendo a trabalhar com tabelas grandes"><a class="t" href="https://www.youtube.com/watch?v=XmrNuqmmckM&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Aprendendo a trabalhar com tabelas grandes</a><span class="d">15:55</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">30</span><input type="checkbox" data-id="ZnjU3PzhGi0" aria-label="Concluir: Caption e Escopo de títulos em tabelas"><a class="t" href="https://www.youtube.com/watch?v=ZnjU3PzhGi0&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Caption e Escopo de títulos em tabelas</a><span class="d">9:59</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">31</span><input type="checkbox" data-id="IYUiFRE5hpI" aria-label="Concluir: Efeito Zebrado na tabela com HTML e CSS"><a class="t" href="https://www.youtube.com/watch?v=IYUiFRE5hpI&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Efeito Zebrado na tabela com HTML e CSS</a><span class="d">8:47</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">32</span><input type="checkbox" data-id="k277B58kC9c" aria-label="Concluir: Cabeçalho fixo em tabelas grandes"><a class="t" href="https://www.youtube.com/watch?v=k277B58kC9c&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Cabeçalho fixo em tabelas grandes</a><span class="d">8:15</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">33</span><input type="checkbox" data-id="olZgL09uDAU" aria-label="Concluir: Mesclagem de células"><a class="t" href="https://www.youtube.com/watch?v=olZgL09uDAU&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Mesclagem de células</a><span class="d">9:13</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">34</span><input type="checkbox" data-id="MnznvoNuy-I" aria-label="Concluir: Desafios (parte 1)"><a class="t" href="https://www.youtube.com/watch?v=MnznvoNuy-I&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Desafios (parte 1)</a><span class="d">7:54</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">35</span><input type="checkbox" data-id="JJXLr02Gx_c" aria-label="Concluir: Exemplo de tabela completa"><a class="t" href="https://www.youtube.com/watch?v=JJXLr02Gx_c&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Exemplo de tabela completa</a><span class="d">13:40</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">36</span><input type="checkbox" data-id="muKp1-jcs3Q" aria-label="Concluir: Escopos de grupo"><a class="t" href="https://www.youtube.com/watch?v=muKp1-jcs3Q&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Escopos de grupo</a><span class="d">7:55</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">37</span><input type="checkbox" data-id="V2gVaqTSRmo" aria-label="Concluir: Desafios (parte 2)"><a class="t" href="https://www.youtube.com/watch?v=V2gVaqTSRmo&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Desafios (parte 2)</a><span class="d">6:00</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">38</span><input type="checkbox" data-id="1Ro7rjINNb0" aria-label="Concluir: Agrupando Colunas com colgroup"><a class="t" href="https://www.youtube.com/watch?v=1Ro7rjINNb0&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Agrupando Colunas com colgroup</a><span class="d">12:08</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">39</span><input type="checkbox" data-id="-0CgGstWMcA" aria-label="Concluir: Tabelas responsivas"><a class="t" href="https://www.youtube.com/watch?v=-0CgGstWMcA&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Tabelas responsivas</a><span class="d">8:33</span><span class="s">assistir</span></li>
+    </ul>
+  </div>
+
+  <div class="chapter off">
+    <div class="chapter-head">
+      <span class="cap">Encerramento</span>
+      <h3>Fim do módulo</h3>
+      <span class="cs">pular</span>
+      <span class="ctime">6min51s</span>
+    </div>
+    <ul class="list">
+      <li class="row skip"><span class="n">40</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=XJ10-IKH8ig&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">Fim do Módulo 3. O Módulo 4 de HTML5 vem aí!</a><span class="d">6:51</span><span class="s">pular</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== PARTE 5 ===================== -->
+<section class="part">
+  <div class="part-head">
+    <span class="part-num">Parte 5 &middot; 3 capítulos de 5</span>
+    <h2>HTML5/CSS3 &mdash; Módulo 4</h2>
+    <span class="part-time">6h54min04s</span>
+  </div>
+  <p class="part-sub">45 vídeos na playlist, agrupados por capítulo &middot; <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">abrir playlist completa</a></p>
+
+  <div class="chapter off">
+    <div class="chapter-head">
+      <span class="cap">Abertura</span>
+      <h3>Vídeo de introdução</h3>
+      <span class="cs">pular</span>
+      <span class="ctime">5min47s</span>
+    </div>
+    <ul class="list">
+      <li class="row skip"><span class="n">1</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=zHKHMmEG9vE&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">O que vamos aprender no módulo 4?</a><span class="d">5:47</span><span class="s">pular</span></li>
+    </ul>
+  </div>
+
+  <div class="chapter off">
+    <div class="chapter-head">
+      <span class="cap">Capítulo 22</span>
+      <h3>Iframe</h3>
+      <span class="cs">pular</span>
+      <span class="ctime">1h36min09s</span>
+      <p class="why">Não é algo que utilizamos no dia a dia.</p>
+    </div>
+    <ul class="list">
+      <li class="row skip"><span class="n">2</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=GWULnkTnapM&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">O iframe ainda pode ser usado?</a><span class="d">13:10</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">3</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=eAxGt3ObQ24&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Configurando iframes</a><span class="d">10:58</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">4</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=G8H5jhabq8k&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Conteúdo local no iframe</a><span class="d">10:10</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">5</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=y6CKgnBYs5E&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Navegação no iframe</a><span class="d">12:20</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">6</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=8Jb75kIqUQs&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Conteúdo no iframe por código</a><span class="d">8:45</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">7</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=_bYRQTnFXF8&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Inconvenientes do iframe</a><span class="d">12:14</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">8</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=mRhjlDN4Ezo&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Tornando iframes mais seguros</a><span class="d">16:52</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">9</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=dzhJsc1YszU&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Dicas para iframes melhores</a><span class="d">11:40</span><span class="s">pular</span></li>
+    </ul>
+  </div>
+
+  <div class="chapter off">
+    <div class="chapter-head">
+      <span class="cap">Capítulo 23</span>
+      <h3>Projeto de redes sociais</h3>
+      <span class="cs">pular</span>
+      <span class="ctime">1h23min55s</span>
+      <p class="why">A prática vem do projeto Operação Curiosidade, aplicado em paralelo.</p>
+    </div>
+    <ul class="list">
+      <li class="row skip"><span class="n">10</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=hPze5_OYqBw&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Criando um projeto do zero</a><span class="d">8:53</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">11</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=Rgji4o96ZhA&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Vamos começar o projeto</a><span class="d">10:18</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">12</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=HUnltyZ9Rxg&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Criando a página inicial do projeto</a><span class="d">13:05</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">13</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=Gx-zp0aaOto&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Posicionando o conteúdo do site</a><span class="d">9:33</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">14</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=1kOhJr4DXIg&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Criando os botões para redes sociais</a><span class="d">14:37</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">15</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=ar5UB2MxraE&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Criando as páginas de cada rede social</a><span class="d">14:37</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">16</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=z30JMe5Cufs&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Personalizando as imagens do projeto</a><span class="d">12:52</span><span class="s">pular</span></li>
+    </ul>
+  </div>
+
+  <div class="chapter on">
+    <div class="chapter-head">
+      <span class="cap">Capítulo 24</span>
+      <h3>Formulários</h3>
+      <span class="cs">assistir</span>
+      <span class="ctime">2h34min36s &middot; 11 vídeos</span>
+    </div>
+    <ul class="list">
+      <li class="row watch"><span class="n">17</span><input type="checkbox" data-id="Wa1Ji2t2gmc" aria-label="Concluir: Como criar formulários com HTML5"><a class="t" href="https://www.youtube.com/watch?v=Wa1Ji2t2gmc&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Como criar formulários com HTML5</a><span class="d">12:56</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">18</span><input type="checkbox" data-id="MqdSffM1HZc" aria-label="Concluir: Usar Label vai melhorar seus formulários"><a class="t" href="https://www.youtube.com/watch?v=MqdSffM1HZc&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Usar Label vai melhorar seus formulários</a><span class="d">12:41</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">19</span><input type="checkbox" data-id="rcaXavXsWGA" aria-label="Concluir: Métodos GET e POST para formulários"><a class="t" href="https://www.youtube.com/watch?v=rcaXavXsWGA&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Métodos GET e POST para formulários</a><span class="d">13:18</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">20</span><input type="checkbox" data-id="SinNyasc-zU" aria-label="Concluir: Criando caixas de texto e de senha"><a class="t" href="https://www.youtube.com/watch?v=SinNyasc-zU&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Criando caixas de texto e de senha</a><span class="d">18:08</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">21</span><input type="checkbox" data-id="7P22zubU6i8" aria-label="Concluir: Elementos number, month, date e time"><a class="t" href="https://www.youtube.com/watch?v=7P22zubU6i8&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Elementos number, month, date e time</a><span class="d">16:46</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">22</span><input type="checkbox" data-id="jX7v3lFdnvg" aria-label="Concluir: Compatibilidade com navegadores"><a class="t" href="https://www.youtube.com/watch?v=jX7v3lFdnvg&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Compatibilidade com navegadores</a><span class="d">11:27</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">23</span><input type="checkbox" data-id="SRMEHklQC4M" aria-label="Concluir: Formulários com telefone e e-mail"><a class="t" href="https://www.youtube.com/watch?v=SRMEHklQC4M&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Formulários com telefone e e-mail</a><span class="d">12:21</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">24</span><input type="checkbox" data-id="iGDHFa4znHE" aria-label="Concluir: Checkbox e Radio button em HTML"><a class="t" href="https://www.youtube.com/watch?v=iGDHFa4znHE&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Checkbox e Radio button em HTML</a><span class="d">12:56</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">25</span><input type="checkbox" data-id="acOURIAlB1Q" aria-label="Concluir: Elementos color, range e file em HTML"><a class="t" href="https://www.youtube.com/watch?v=acOURIAlB1Q&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Elementos color, range e file em HTML</a><span class="d">12:50</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">26</span><input type="checkbox" data-id="PFGmSEj2wIo" aria-label="Concluir: Select, datalist e textarea em HTML"><a class="t" href="https://www.youtube.com/watch?v=PFGmSEj2wIo&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Select, datalist e textarea em HTML</a><span class="d">15:51</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">27</span><input type="checkbox" data-id="8b6K4UQDm7w" aria-label="Concluir: Elemento output em formulários HTML"><a class="t" href="https://www.youtube.com/watch?v=8b6K4UQDm7w&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Elemento output em formulários HTML</a><span class="d">15:22</span><span class="s">assistir</span></li>
+    </ul>
+  </div>
+
+  <div class="chapter on">
+    <div class="chapter-head">
+      <span class="cap">Capítulo 25</span>
+      <h3>Media Queries</h3>
+      <span class="cs">assistir</span>
+      <span class="ctime">2h51min37s &middot; 12 vídeos</span>
+    </div>
+    <ul class="list">
+      <li class="row watch"><span class="n">28</span><input type="checkbox" data-id="9rY8V2rvP2o" aria-label="Concluir: O que são Media Queries em CSS"><a class="t" href="https://www.youtube.com/watch?v=9rY8V2rvP2o&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">O que são Media Queries em CSS</a><span class="d">12:52</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">29</span><input type="checkbox" data-id="DMYlN21ajtU" aria-label="Concluir: Criando um site com versão para impressora"><a class="t" href="https://www.youtube.com/watch?v=DMYlN21ajtU&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Criando um site com versão para impressora</a><span class="d">17:55</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">30</span><input type="checkbox" data-id="VGD5Uy1C8Cw" aria-label="Concluir: Múltiplas Media Features com CSS"><a class="t" href="https://www.youtube.com/watch?v=VGD5Uy1C8Cw&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Múltiplas Media Features com CSS</a><span class="d">15:18</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">31</span><input type="checkbox" data-id="IRCDwdZLlX4" aria-label="Concluir: Seguindo a orientação do dispositivo"><a class="t" href="https://www.youtube.com/watch?v=IRCDwdZLlX4&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Seguindo a orientação do dispositivo</a><span class="d">14:34</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">32</span><input type="checkbox" data-id="DkA_OQgjjKg" aria-label="Concluir: Reunindo tudo em um único CSS"><a class="t" href="https://www.youtube.com/watch?v=DkA_OQgjjKg&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Reunindo tudo em um único CSS</a><span class="d">12:48</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">33</span><input type="checkbox" data-id="q6SZKTHUQiw" aria-label="Concluir: Mobile First"><a class="t" href="https://www.youtube.com/watch?v=q6SZKTHUQiw&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Mobile First</a><span class="d">13:25</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">34</span><input type="checkbox" data-id="wU80w4xbNxQ" aria-label="Concluir: Iniciando um site mobile first"><a class="t" href="https://www.youtube.com/watch?v=wU80w4xbNxQ&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Iniciando um site mobile first</a><span class="d">15:41</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">35</span><input type="checkbox" data-id="S8YXMqDsbhA" aria-label="Concluir: Device breakpoints"><a class="t" href="https://www.youtube.com/watch?v=S8YXMqDsbhA&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Device breakpoints</a><span class="d">18:22</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">36</span><input type="checkbox" data-id="Zp3fnf99kTg" aria-label="Concluir: Menu responsivo com HTML5 e CSS3"><a class="t" href="https://www.youtube.com/watch?v=Zp3fnf99kTg&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Menu responsivo com HTML5 e CSS3</a><span class="d">11:00</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">37</span><input type="checkbox" data-id="67W4NdxW1kw" aria-label="Concluir: Configurando o layout do projeto"><a class="t" href="https://www.youtube.com/watch?v=67W4NdxW1kw&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Configurando o layout do projeto</a><span class="d">9:28</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">38</span><input type="checkbox" data-id="Dd6Z3gkud18" aria-label="Concluir: Criando um menu hambúrguer"><a class="t" href="https://www.youtube.com/watch?v=Dd6Z3gkud18&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Criando um menu hambúrguer</a><span class="d">15:12</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">39</span><input type="checkbox" data-id="T1rfhkmcH00" aria-label="Concluir: Media Queries para outros dispositivos"><a class="t" href="https://www.youtube.com/watch?v=T1rfhkmcH00&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Media Queries para outros dispositivos</a><span class="d">15:02</span><span class="s">assistir</span></li>
+    </ul>
+  </div>
+
+  <div class="chapter on">
+    <div class="chapter-head">
+      <span class="cap">Capítulo 26</span>
+      <h3>Projeto: tela de login</h3>
+      <span class="cs">assistir</span>
+      <span class="ctime">1h27min51s &middot; 6 vídeos</span>
+      <p class="why">Exceção entre os projetos: a Turma de Formação também terá uma tela de login.</p>
+    </div>
+    <ul class="list">
+      <li class="row watch"><span class="n">40</span><input type="checkbox" data-id="4NB0_DPpjak" aria-label="Concluir: Tela de login responsiva só com HTML e CSS"><a class="t" href="https://www.youtube.com/watch?v=4NB0_DPpjak&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Tela de login responsiva só com HTML e CSS</a><span class="d">19:34</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">41</span><input type="checkbox" data-id="AKj3L3ouVAk" aria-label="Concluir: Versão mobile first da tela de login"><a class="t" href="https://www.youtube.com/watch?v=AKj3L3ouVAk&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Versão mobile first da tela de login</a><span class="d">14:34</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">42</span><input type="checkbox" data-id="Ec7Vu96wdpA" aria-label="Concluir: Outras Media Queries para o projeto"><a class="t" href="https://www.youtube.com/watch?v=Ec7Vu96wdpA&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Outras Media Queries para o projeto</a><span class="d">11:46</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">43</span><input type="checkbox" data-id="htekZ2wA7Zo" aria-label="Concluir: Criando o formulário de login"><a class="t" href="https://www.youtube.com/watch?v=htekZ2wA7Zo&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Criando o formulário de login</a><span class="d">12:41</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">44</span><input type="checkbox" data-id="JDS9ZLpoS6E" aria-label="Concluir: Aplicando estilo ao formulário de login"><a class="t" href="https://www.youtube.com/watch?v=JDS9ZLpoS6E&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Aplicando estilo ao formulário de login</a><span class="d">13:44</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">45</span><input type="checkbox" data-id="c2PePX8joKc" aria-label="Concluir: Finalizando projeto tela de login"><a class="t" href="https://www.youtube.com/watch?v=c2PePX8joKc&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT">Finalizando projeto tela de login</a><span class="d">15:32</span><span class="s">assistir</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== PARTE 6 ===================== -->
+<section class="part">
+  <div class="part-head">
+    <span class="part-num">Parte 6 &middot; 2 capítulos de 3 &middot; etapa mais longa da trilha</span>
+    <h2>HTML5/CSS3 &mdash; Módulo 5</h2>
+    <span class="part-time">10h08min57s</span>
+  </div>
+  <p class="part-sub">47 vídeos na playlist, agrupados por capítulo &middot; <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">abrir playlist completa</a></p>
+
+  <div class="chapter off">
+    <div class="chapter-head">
+      <span class="cap">Abertura</span>
+      <h3>Vídeo de introdução</h3>
+      <span class="cs">pular</span>
+      <span class="ctime">16min50s</span>
+    </div>
+    <ul class="list">
+      <li class="row skip"><span class="n">1</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=rqvn_c2n9Eg&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">O que vamos aprender no módulo 5?</a><span class="d">16:50</span><span class="s">pular</span></li>
+    </ul>
+  </div>
+
+  <div class="chapter on">
+    <div class="chapter-head">
+      <span class="cap">Capítulo 27</span>
+      <h3>Flexbox</h3>
+      <span class="cs">assistir</span>
+      <span class="ctime">5h37min58s &middot; 17 vídeos</span>
+    </div>
+    <ul class="list">
+      <li class="row watch"><span class="n">2</span><input type="checkbox" data-id="YeGn9nGies0" aria-label="Concluir: Primeiros passos com Flexbox CSS"><a class="t" href="https://www.youtube.com/watch?v=YeGn9nGies0&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Primeiros passos com Flexbox CSS</a><span class="d">21:41</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">3</span><input type="checkbox" data-id="qtGI16QcV1U" aria-label="Concluir: Direções e Eixos Flexbox CSS"><a class="t" href="https://www.youtube.com/watch?v=qtGI16QcV1U&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Direções e Eixos Flexbox CSS</a><span class="d">19:08</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">4</span><input type="checkbox" data-id="KRk3tjIZeFI" aria-label="Concluir: Empacotamento e fluxo no Flexbox CSS"><a class="t" href="https://www.youtube.com/watch?v=KRk3tjIZeFI&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Empacotamento e fluxo no Flexbox CSS</a><span class="d">23:01</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">5</span><input type="checkbox" data-id="KKdr1KZeFqk" aria-label="Concluir: Alinhamento nos eixos Flexbox"><a class="t" href="https://www.youtube.com/watch?v=KKdr1KZeFqk&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Alinhamento nos eixos Flexbox</a><span class="d">24:05</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">6</span><input type="checkbox" data-id="gfimpySRhUI" aria-label="Concluir: Centralização absoluta com Flexbox"><a class="t" href="https://www.youtube.com/watch?v=gfimpySRhUI&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Centralização absoluta com Flexbox</a><span class="d">14:58</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">7</span><input type="checkbox" data-id="qMTX98pCwXA" aria-label="Concluir: Alinhamento de elementos empacotados no Flexbox"><a class="t" href="https://www.youtube.com/watch?v=qMTX98pCwXA&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Alinhamento de elementos empacotados no Flexbox</a><span class="d">23:22</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">8</span><input type="checkbox" data-id="D7jeyyfigBM" aria-label="Concluir: Anatomia dos itens Flexbox"><a class="t" href="https://www.youtube.com/watch?v=D7jeyyfigBM&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Anatomia dos itens Flexbox</a><span class="d">23:32</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">9</span><input type="checkbox" data-id="J8iyHpOoLSU" aria-label="Concluir: Propriedade flex-basis em Flexbox"><a class="t" href="https://www.youtube.com/watch?v=J8iyHpOoLSU&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Propriedade flex-basis em Flexbox</a><span class="d">17:00</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">10</span><input type="checkbox" data-id="Le_rq-Cz_mo" aria-label="Concluir: Controle do tamanho de itens flexíveis"><a class="t" href="https://www.youtube.com/watch?v=Le_rq-Cz_mo&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Controle do tamanho de itens flexíveis</a><span class="d">37:10</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">11</span><input type="checkbox" data-id="JSf4HuF52g0" aria-label="Concluir: A propriedade flex"><a class="t" href="https://www.youtube.com/watch?v=JSf4HuF52g0&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">A propriedade flex</a><span class="d">18:38</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">12</span><input type="checkbox" data-id="VlAv9_R_rNY" aria-label="Concluir: Criando um menu com Flexbox (parte 1)"><a class="t" href="https://www.youtube.com/watch?v=VlAv9_R_rNY&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Criando um menu com Flexbox (parte 1)</a><span class="d">17:55</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">13</span><input type="checkbox" data-id="MXYtSrkHdCs" aria-label="Concluir: Criando um menu com Flexbox (parte 2)"><a class="t" href="https://www.youtube.com/watch?v=MXYtSrkHdCs&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Criando um menu com Flexbox (parte 2)</a><span class="d">17:13</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">14</span><input type="checkbox" data-id="hlp3C9QI3Qk" aria-label="Concluir: Menu Responsivo com Flexbox e Media Queries"><a class="t" href="https://www.youtube.com/watch?v=hlp3C9QI3Qk&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Menu Responsivo com Flexbox e Media Queries</a><span class="d">13:06</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">15</span><input type="checkbox" data-id="VBGMnFHRqcY" aria-label="Concluir: Conteúdo flexível apenas com Flexbox (parte 1)"><a class="t" href="https://www.youtube.com/watch?v=VBGMnFHRqcY&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Conteúdo flexível apenas com Flexbox (parte 1)</a><span class="d">20:28</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">16</span><input type="checkbox" data-id="U9-L5yXiNyE" aria-label="Concluir: Conteúdo flexível apenas com Flexbox (parte 2)"><a class="t" href="https://www.youtube.com/watch?v=U9-L5yXiNyE&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Conteúdo flexível apenas com Flexbox (parte 2)</a><span class="d">20:02</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">17</span><input type="checkbox" data-id="Homo-ORr-9o" aria-label="Concluir: Jogo que vai te ensinar Flexbox CSS"><a class="t" href="https://www.youtube.com/watch?v=Homo-ORr-9o&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Jogo que vai te ensinar Flexbox CSS</a><span class="d">11:25</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">18</span><input type="checkbox" data-id="ue1VadygZT8" aria-label="Concluir: Flexbox Froggy: resposta de todos os desafios"><a class="t" href="https://www.youtube.com/watch?v=ue1VadygZT8&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Flexbox Froggy: resposta de todos os desafios</a><span class="d">15:14</span><span class="s">assistir</span></li>
+    </ul>
+  </div>
+
+  <div class="chapter on">
+    <div class="chapter-head">
+      <span class="cap">Capítulo 28</span>
+      <h3>Grid Layout</h3>
+      <span class="cs">assistir</span>
+      <span class="ctime">4h30min59s &middot; 15 vídeos</span>
+    </div>
+    <ul class="list">
+      <li class="row watch"><span class="n">19</span><input type="checkbox" data-id="p8q2_VIk-2Y" aria-label="Concluir: O que é Grid Layout?"><a class="t" href="https://www.youtube.com/watch?v=p8q2_VIk-2Y&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">O que é Grid Layout?</a><span class="d">14:12</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">20</span><input type="checkbox" data-id="u1m7ukyC0Yg" aria-label="Concluir: A Anatomia de um Grid"><a class="t" href="https://www.youtube.com/watch?v=u1m7ukyC0Yg&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">A Anatomia de um Grid</a><span class="d">18:09</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">21</span><input type="checkbox" data-id="rPUK2-dzTmg" aria-label="Concluir: Propriedades de container para Grids (parte 1)"><a class="t" href="https://www.youtube.com/watch?v=rPUK2-dzTmg&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Propriedades de container para Grids (parte 1)</a><span class="d">14:22</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">22</span><input type="checkbox" data-id="1FKUfMWBcLM" aria-label="Concluir: CSS Grid Layout na prática (parte 1)"><a class="t" href="https://www.youtube.com/watch?v=1FKUfMWBcLM&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">CSS Grid Layout na prática (parte 1)</a><span class="d">18:35</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">23</span><input type="checkbox" data-id="RK3TLfFqEDw" aria-label="Concluir: Propriedades de container para Grids (parte 2)"><a class="t" href="https://www.youtube.com/watch?v=RK3TLfFqEDw&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Propriedades de container para Grids (parte 2)</a><span class="d">18:08</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">24</span><input type="checkbox" data-id="k3wb4g6exi8" aria-label="Concluir: CSS Grid Layout na prática (parte 2)"><a class="t" href="https://www.youtube.com/watch?v=k3wb4g6exi8&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">CSS Grid Layout na prática (parte 2)</a><span class="d">17:44</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">25</span><input type="checkbox" data-id="q3q3zqyg9_E" aria-label="Concluir: Propriedades de container para Grids (parte 3)"><a class="t" href="https://www.youtube.com/watch?v=q3q3zqyg9_E&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Propriedades de container para Grids (parte 3)</a><span class="d">17:32</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">26</span><input type="checkbox" data-id="eWxNsMI4UWc" aria-label="Concluir: Propriedades de container para Grids (parte 4)"><a class="t" href="https://www.youtube.com/watch?v=eWxNsMI4UWc&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Propriedades de container para Grids (parte 4)</a><span class="d">18:47</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">27</span><input type="checkbox" data-id="UhvHw8SSWVs" aria-label="Concluir: CSS Grid Layout na prática (parte 3)"><a class="t" href="https://www.youtube.com/watch?v=UhvHw8SSWVs&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">CSS Grid Layout na prática (parte 3)</a><span class="d">20:46</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">28</span><input type="checkbox" data-id="4qZ0BL5vauQ" aria-label="Concluir: Propriedades de itens para Grids (parte 1)"><a class="t" href="https://www.youtube.com/watch?v=4qZ0BL5vauQ&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Propriedades de itens para Grids (parte 1)</a><span class="d">18:48</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">29</span><input type="checkbox" data-id="CGNZnoGiXQc" aria-label="Concluir: Mão na Massa: Posicionando Itens no Grid Layout"><a class="t" href="https://www.youtube.com/watch?v=CGNZnoGiXQc&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Mão na Massa: Posicionando Itens no Grid Layout</a><span class="d">15:42</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">30</span><input type="checkbox" data-id="HTCaQ28xPMU" aria-label="Concluir: CSS Grid: Shorthands para Itens"><a class="t" href="https://www.youtube.com/watch?v=HTCaQ28xPMU&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">CSS Grid: Shorthands para Itens</a><span class="d">27:07</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">31</span><input type="checkbox" data-id="dwjiUzr_XDg" aria-label="Concluir: Desafio: Criando um Layout de Site com CSS Grid"><a class="t" href="https://www.youtube.com/watch?v=dwjiUzr_XDg&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Desafio: Criando um Layout de Site com CSS Grid</a><span class="d">20:04</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">32</span><input type="checkbox" data-id="scN0yzKgN0U" aria-label="Concluir: Jogo para praticar Grid Layout"><a class="t" href="https://www.youtube.com/watch?v=scN0yzKgN0U&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Jogo para praticar Grid Layout</a><span class="d">9:00</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">33</span><input type="checkbox" data-id="AXqAhjRHuSY" aria-label="Concluir: Grid Garden: resposta de todos os desafios"><a class="t" href="https://www.youtube.com/watch?v=AXqAhjRHuSY&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Grid Garden: resposta de todos os desafios</a><span class="d">22:03</span><span class="s">assistir</span></li>
+    </ul>
+  </div>
+
+  <div class="chapter off">
+    <div class="chapter-head">
+      <span class="cap">Capítulo 29</span>
+      <h3>Projeto portfólio</h3>
+      <span class="cs">pular</span>
+      <span class="ctime">3h16min39s &middot; 14 vídeos</span>
+      <p class="why">A prática vem do projeto Operação Curiosidade. Atenção: o capítulo cresceu de 3h00min21s para 3h16min39s desde a montagem do plano — dois vídeos novos ao final.</p>
+    </div>
+    <ul class="list">
+      <li class="row skip"><span class="n">34</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=6PkfO7jrCLk&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Crie seu portfólio do ZERO com HTML5 e CSS3</a><span class="d">13:21</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">35</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=OJq8EFs6pjw&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Organizando arquivos e repositório do projeto</a><span class="d">14:02</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">36</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=tNobiwuAaAg&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Primeiro passo para construir seu portfólio</a><span class="d">18:44</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">37</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=_Imt5rZuYsk&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Menu superior do seu portfólio</a><span class="d">13:49</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">38</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=NLshoeuKLWw&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Como adicionar ícones no menu com HTML5 e CSS3</a><span class="d">12:34</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">39</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=uSWyhKUhhno&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Construindo o layout do topo do portfólio</a><span class="d">16:58</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">40</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=vl0eatPehLs&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Incorporando vídeo responsivo no portfólio</a><span class="d">14:36</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">41</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=KioYMUZxrSE&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Barras de progresso no seu portfólio</a><span class="d">14:53</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">42</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=iBW7ovHevNk&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Área de Formações no Portfólio</a><span class="d">11:50</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">43</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=KG5-4FOukTo&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Área de Projetos do seu portfólio</a><span class="d">12:05</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">44</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=rFHkMvjdB2A&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Header fixo com CSS e rolagem suave em JavaScript</a><span class="d">14:45</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">45</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=Jb-EfzqDWEo&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Sticky Header, Grid e preparação para tema</a><span class="d">10:20</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">46</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=fvagCmhbyNE&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Seu Portfólio no Modo Escuro</a><span class="d">12:24</span><span class="s">pular</span><span class="why">Publicado depois da montagem do plano.</span></li>
+      <li class="row skip"><span class="n">47</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=cXbgKlUFBRg&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d">Módulo 5 Finalizado! Encerramento Oficial</a><span class="d">16:18</span><span class="s">pular</span><span class="why">Publicado depois da montagem do plano.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== PARTE 7 ===================== -->
+<section class="part">
+  <div class="part-head">
+    <span class="part-num">Parte 7 &middot; 19 vídeos + 5 opcionais</span>
+    <h2>JavaScript / ECMAScript</h2>
+    <span class="part-time">7h46min33s <span style="color:var(--opt-ink)">(9h35min19s com opcionais)</span></span>
+  </div>
+  <p class="part-sub">33 vídeos na playlist &middot; <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">abrir playlist completa</a></p>
+
+  <div class="chapter off">
+    <div class="chapter-head">
+      <span class="cap">Abertura</span>
+      <h3>Teaser e trailer</h3>
+      <span class="cs">pular</span>
+      <span class="ctime">4min29s</span>
+    </div>
+    <ul class="list">
+      <li class="row skip"><span class="n">1</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=1-w1RfGIov4&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Curso de JavaScript &mdash; Teaser</a><span class="d">1:11</span><span class="s">pular</span></li>
+      <li class="row skip"><span class="n">2</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=BXqUH86F-kA&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Curso Grátis de JavaScript Moderno</a><span class="d">3:18</span><span class="s">pular</span></li>
+    </ul>
+  </div>
+
+  <div class="chapter on">
+    <div class="chapter-head">
+      <span class="cap">Módulo A</span>
+      <h3>Conhecendo o JavaScript</h3>
+      <span class="cs">assistir</span>
+      <span class="ctime">57min07s &middot; 2 vídeos + 2 opcionais</span>
+    </div>
+    <ul class="list">
+      <li class="row skip"><span class="n">3</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=uzEhd3Lugik&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Módulo A &mdash; abertura</a><span class="d">6:20</span><span class="s">pular</span></li>
+      <li class="row opt"><span class="n">4</span><input type="checkbox" data-id="Ptbk2af68e8" aria-label="Concluir: O que o JavaScript é capaz de fazer? #01"><a class="t" href="https://www.youtube.com/watch?v=Ptbk2af68e8&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">O que o JavaScript é capaz de fazer? #01</a><span class="d">28:50</span><span class="s">opcional</span></li>
+      <li class="row opt"><span class="n">5</span><input type="checkbox" data-id="rUTKomc2gG8" aria-label="Concluir: JavaScript: como chegamos até aqui? #02"><a class="t" href="https://www.youtube.com/watch?v=rUTKomc2gG8&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">JavaScript: como chegamos até aqui? #02</a><span class="d">24:47</span><span class="s">opcional</span></li>
+      <li class="row watch"><span class="n">6</span><input type="checkbox" data-id="FdePtO5JSd0" aria-label="Concluir: Dando os primeiros passos #03"><a class="t" href="https://www.youtube.com/watch?v=FdePtO5JSd0&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Dando os primeiros passos #03</a><span class="d">32:52</span><span class="s">assistir</span><span class="why">Metodologia de aprendizado, bibliografia recomendada e instalação do ambiente.</span></li>
+      <li class="row watch"><span class="n">7</span><input type="checkbox" data-id="OmmJBfcMJA8" aria-label="Concluir: Criando o seu primeiro script #04"><a class="t" href="https://www.youtube.com/watch?v=OmmJBfcMJA8&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Criando o seu primeiro script #04</a><span class="d">24:15</span><span class="s">assistir</span><span class="why">Organização de projeto, primeiro script e comandos de interatividade.</span></li>
+    </ul>
+  </div>
+
+  <div class="chapter on">
+    <div class="chapter-head">
+      <span class="cap">Módulo B</span>
+      <h3>Comandos básicos</h3>
+      <span class="cs">assistir</span>
+      <span class="ctime">2h00min54s &middot; 4 vídeos</span>
+    </div>
+    <ul class="list">
+      <li class="row skip"><span class="n">8</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=FjT97HVT5g8&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Módulo B &mdash; abertura</a><span class="d">2:20</span><span class="s">pular</span></li>
+      <li class="row watch"><span class="n">9</span><input type="checkbox" data-id="Vbabsye7mWo" aria-label="Concluir: Variáveis e Tipos Primitivos #05"><a class="t" href="https://www.youtube.com/watch?v=Vbabsye7mWo&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Variáveis e Tipos Primitivos #05</a><span class="d">31:41</span><span class="s">assistir</span><span class="why">Conceito de variáveis, tipos primitivos, ferramentas e prática.</span></li>
+      <li class="row watch"><span class="n">10</span><input type="checkbox" data-id="OJgu_KCCUSY" aria-label="Concluir: Tratamento de dados #06"><a class="t" href="https://www.youtube.com/watch?v=OJgu_KCCUSY&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Tratamento de dados #06</a><span class="d">39:16</span><span class="s">assistir</span><span class="why">Interação com o usuário, conversão de tipos, concatenação, template strings, manipulação de strings e formatação numérica.</span></li>
+      <li class="row watch"><span class="n">11</span><input type="checkbox" data-id="hZG9ODUdxHo" aria-label="Concluir: Operadores (Parte 1) #07"><a class="t" href="https://www.youtube.com/watch?v=hZG9ODUdxHo&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Operadores (Parte 1) #07</a><span class="d">25:31</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">12</span><input type="checkbox" data-id="BP63NhITvao" aria-label="Concluir: Operadores (Parte 2) #08"><a class="t" href="https://www.youtube.com/watch?v=BP63NhITvao&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Operadores (Parte 2) #08</a><span class="d">24:26</span><span class="s">assistir</span></li>
+    </ul>
+  </div>
+
+  <div class="chapter on">
+    <div class="chapter-head">
+      <span class="cap">Módulo C</span>
+      <h3>Entendendo o DOM</h3>
+      <span class="cs">assistir</span>
+      <span class="ctime">56min59s &middot; 2 vídeos</span>
+    </div>
+    <ul class="list">
+      <li class="row skip"><span class="n">13</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=H80nCKs9c2k&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Módulo C &mdash; abertura</a><span class="d">2:02</span><span class="s">pular</span></li>
+      <li class="row watch"><span class="n">14</span><input type="checkbox" data-id="WWZX8RWLxIk" aria-label="Concluir: Introdução ao DOM #09"><a class="t" href="https://www.youtube.com/watch?v=WWZX8RWLxIk&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Introdução ao DOM #09</a><span class="d">28:05</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">15</span><input type="checkbox" data-id="wWnBB-mZIvY" aria-label="Concluir: Eventos DOM #10"><a class="t" href="https://www.youtube.com/watch?v=wWnBB-mZIvY&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Eventos DOM #10</a><span class="d">28:54</span><span class="s">assistir</span></li>
+    </ul>
+  </div>
+
+  <div class="chapter on">
+    <div class="chapter-head">
+      <span class="cap">Módulo D</span>
+      <h3>Condições</h3>
+      <span class="cs">assistir</span>
+      <span class="ctime">56min50s &middot; 2 vídeos + 3 opcionais</span>
+    </div>
+    <ul class="list">
+      <li class="row skip"><span class="n">16</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=uPFasdmZHJc&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Módulo D &mdash; abertura</a><span class="d">2:18</span><span class="s">pular</span></li>
+      <li class="row watch"><span class="n">17</span><input type="checkbox" data-id="cOdG4eACN2A" aria-label="Concluir: Condições (Parte 1) #11"><a class="t" href="https://www.youtube.com/watch?v=cOdG4eACN2A&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Condições (Parte 1) #11</a><span class="d">27:30</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">18</span><input type="checkbox" data-id="EEStcIe8rAM" aria-label="Concluir: Condições (Parte 2) #12"><a class="t" href="https://www.youtube.com/watch?v=EEStcIe8rAM&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Condições (Parte 2) #12</a><span class="d">29:20</span><span class="s">assistir</span></li>
+      <li class="row opt"><span class="n">19</span><input type="checkbox" data-id="b2K7eo5Jdj8" aria-label="Concluir: Exercícios JavaScript (Parte 1)"><a class="t" href="https://www.youtube.com/watch?v=b2K7eo5Jdj8&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Exercícios JavaScript (Parte 1)</a><span class="d">14:43</span><span class="s">opcional</span></li>
+      <li class="row opt"><span class="n">20</span><input type="checkbox" data-id="UXSWgnbSHxs" aria-label="Concluir: Exercícios JavaScript (Parte 2)"><a class="t" href="https://www.youtube.com/watch?v=UXSWgnbSHxs&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Exercícios JavaScript (Parte 2)</a><span class="d">17:38</span><span class="s">opcional</span></li>
+      <li class="row opt"><span class="n">21</span><input type="checkbox" data-id="f5es-PpaUI8" aria-label="Concluir: Exercícios JavaScript (Parte 3)"><a class="t" href="https://www.youtube.com/watch?v=f5es-PpaUI8&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Exercícios JavaScript (Parte 3)</a><span class="d">22:48</span><span class="s">opcional</span></li>
+    </ul>
+  </div>
+
+  <div class="chapter on">
+    <div class="chapter-head">
+      <span class="cap">Módulo E</span>
+      <h3>Repetições</h3>
+      <span class="cs">assistir</span>
+      <span class="ctime">1h22min43s &middot; 5 vídeos</span>
+    </div>
+    <ul class="list">
+      <li class="row skip"><span class="n">22</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=3emz6rpcJyA&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Módulo E &mdash; abertura</a><span class="d">2:32</span><span class="s">pular</span></li>
+      <li class="row watch"><span class="n">23</span><input type="checkbox" data-id="5rZqYPKIwkY" aria-label="Concluir: Repetições (Parte 1) #13"><a class="t" href="https://www.youtube.com/watch?v=5rZqYPKIwkY&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Repetições (Parte 1) #13</a><span class="d">20:06</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">24</span><input type="checkbox" data-id="eX-lkN_Zahc" aria-label="Concluir: Repetições (Parte 2) #14"><a class="t" href="https://www.youtube.com/watch?v=eX-lkN_Zahc&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Repetições (Parte 2) #14</a><span class="d">19:57</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">25</span><input type="checkbox" data-id="6tyHypeY4-8" aria-label="Concluir: Exercícios JavaScript (Parte 4)"><a class="t" href="https://www.youtube.com/watch?v=6tyHypeY4-8&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Exercícios JavaScript (Parte 4)</a><span class="d">10:57</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">26</span><input type="checkbox" data-id="oMNbc_LFz8w" aria-label="Concluir: Exercícios JavaScript (Parte 5)"><a class="t" href="https://www.youtube.com/watch?v=oMNbc_LFz8w&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Exercícios JavaScript (Parte 5)</a><span class="d">18:56</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">27</span><input type="checkbox" data-id="mfHAQ-4Rspw" aria-label="Concluir: Exercícios JavaScript (Parte 6)"><a class="t" href="https://www.youtube.com/watch?v=mfHAQ-4Rspw&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Exercícios JavaScript (Parte 6)</a><span class="d">12:47</span><span class="s">assistir</span></li>
+    </ul>
+  </div>
+
+  <div class="chapter on">
+    <div class="chapter-head">
+      <span class="cap">Módulo F</span>
+      <h3>Avançando os estudos</h3>
+      <span class="cs">assistir</span>
+      <span class="ctime">1h32min00s &middot; 4 vídeos</span>
+    </div>
+    <ul class="list">
+      <li class="row skip"><span class="n">28</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=5m4UhZd-Les&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Módulo F &mdash; abertura</a><span class="d">2:40</span><span class="s">pular</span></li>
+      <li class="row watch"><span class="n">29</span><input type="checkbox" data-id="XdkW62tkAgU" aria-label="Concluir: Variáveis Compostas #15"><a class="t" href="https://www.youtube.com/watch?v=XdkW62tkAgU&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Variáveis Compostas #15</a><span class="d">33:09</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">30</span><input type="checkbox" data-id="mc3TKp2XzhI" aria-label="Concluir: Funções #16"><a class="t" href="https://www.youtube.com/watch?v=mc3TKp2XzhI&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Funções #16</a><span class="d">26:24</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">31</span><input type="checkbox" data-id="vEOEZ03ZyiE" aria-label="Concluir: Exercícios JavaScript (Parte 7)"><a class="t" href="https://www.youtube.com/watch?v=vEOEZ03ZyiE&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Exercícios JavaScript (Parte 7)</a><span class="d">16:44</span><span class="s">assistir</span></li>
+      <li class="row watch"><span class="n">32</span><input type="checkbox" data-id="slLoLLCd-k0" aria-label="Concluir: Exercícios JavaScript (Parte 8)"><a class="t" href="https://www.youtube.com/watch?v=slLoLLCd-k0&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Exercícios JavaScript (Parte 8)</a><span class="d">15:43</span><span class="s">assistir</span></li>
+      <li class="row skip"><span class="n">33</span><span class="nb" aria-hidden="true"></span><a class="t" href="https://www.youtube.com/watch?v=roP93FA-NgU&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Próximos Passos #17</a><span class="d">20:59</span><span class="s">pular</span></li>
+    </ul>
+  </div>
+</section>
+
+<div class="note">
+  <p><b>Sobre os tempos.</b> Cada total foi somado a partir da duração exata dos vídeos no YouTube, por isso alguns
+  ficam alguns minutos acima das estimativas do plano original — a maior diferença está no Módulo 4, capítulo 24
+  (Formulários): <b>2h34min36s</b> somados, contra 2h36min16s estimados.</p>
+  <p><b>Playlists mudam.</b> O capítulo 29 do Módulo 5 (Projeto portfólio) ganhou dois vídeos depois da montagem
+  do plano e passou de 3h00min21s para 3h16min39s. Como o capítulo inteiro é pulado, isso não afeta o total da trilha.</p>
+  <p><b>Módulo 2, vídeo 26.</b> "Grouping Tags em HTML5" (15:18) não constava no plano original, que saltava do
+  vídeo 25 para o 27, e foi incluído como obrigatório — daí o Módulo 2 subir de 4h42min43s para 4h58min01s.</p>
+</div>
+
+<footer>
+  <p>Trilha montada sobre as playlists do Curso em Vídeo (Gustavo Guanabara). Durações e links verificados em 2 de setembro de 2026.</p>
+  <p>Os capítulos de projeto foram pulados porque a prática vem do projeto Operação Curiosidade, desenvolvido em paralelo — a exceção é a tela de login, que a Turma de Formação também vai construir.</p>
+</footer>
+
+</div>
+
+<script>
+  var KEY = "trilha-frontend-2026";
+  var boxes = Array.prototype.slice.call(document.querySelectorAll("input[type=checkbox]"));
+  var req = boxes.filter(function(b){ return b.closest("li").classList.contains("watch"); });
+  var fill = document.getElementById("fill");
+  var count = document.getElementById("count");
+
+  function load(){
+    try { return JSON.parse(localStorage.getItem(KEY) || "{}") || {}; }
+    catch (e) { return {}; }
+  }
+  function save(state){
+    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+  }
+  function render(){
+    var done = 0, extra = 0;
+    boxes.forEach(function(b){
+      b.closest("li").classList.toggle("done", b.checked);
+      if (!b.checked) return;
+      if (b.closest("li").classList.contains("watch")) { done++; } else { extra++; }
+    });
+    fill.style.width = (req.length ? (done / req.length) * 100 : 0) + "%";
+    count.textContent = done + " / " + req.length + " concluídas" + (extra ? " \u00b7 +" + extra + " opcionais" : "");
+  }
+
+  var state = load();
+  boxes.forEach(function(b){
+    b.checked = !!state[b.dataset.id];
+    b.addEventListener("change", function(){
+      var s = load();
+      s[b.dataset.id] = b.checked;
+      save(s);
+      render();
+    });
+  });
+  document.getElementById("reset").addEventListener("click", function(){
+    boxes.forEach(function(b){ b.checked = false; });
+    save({});
+    render();
+  });
+  render();
+</script>
+
+</body></html>
