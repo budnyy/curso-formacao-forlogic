@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+body {
+    font: 1em Arial, Helvetica, sans-serif;
+    background-color: #F2F2F2;
+    color: #0D0D0D;
+}
+
+p{
+    text-align: justify;
+}
+
+#principal{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 2em;
+    background-color: #73030D;
+    color: #F2F2F2;
+}
+
+.destaque{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #732F3B;
+    color: #F2F2F2;
+}
+
+.rock{
+    background-color: rgb(182, 0, 0);
+}
+
+
+.metal{
+    background-color: #0D0D0D;
+}
+
+.jazz {
+    background-color: rgb(79, 115, 232);
+}
