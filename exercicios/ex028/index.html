@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Projeto</title>
+    <style>
+
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container{
+            display: flex;
+        }
+
+        nav {
+            border: 1px dotted black;
+            display: flex;
+        }
+
+        header .item{
+            background-color: black;
+            border-radius: 5px;
+            margin: 5px;
+            padding: 10px;
+        }
+
+        header{
+            background-color: gray;
+            color: white;
+            padding: 10px;
+
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1{
+            font-weight: bold;
+            border: 1px dotted black;
+        }
+
+        main{
+            background-color: lightgray;
+            height: 100vh;
+        }
+
+        main .container{
+            flex-flow: column nowrap;
+            align-items: center;
+            width: 100%;
+        }
+
+        main .item{
+            background-color: white;
+            padding: 10px;
+            max-width: 1000px;
+            margin: 10px;
+        }
+
+        main .item > h1{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="container">
+        <h1>
+            Meu Site
+        </h1>
+        <nav>
+            <div class="item">Opção 1</div>
+            <div class="item">Opção 2</div>
+            <div class="item">Opção 3</div>
+            <div class="item">Opção 4</div>
+            <div class="item">Opção 5</div>
+            <div class="item">Opção 6</div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="item">
+                <h1>Teste do Flexbox</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit minus nobis labore sequi eligendi voluptatem, ratione provident debitis minima iste laboriosam esse odio sunt mollitia rem, rerum explicabo distinctio ex! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos accusamus incidunt numquam nostrum sequi, rerum ipsa atque! Aperiam eius recusandae sequi dignissimos non aut labore fugit cupiditate! Dolorum, saepe delectus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt quam corrupti harum quae, id molestias numquam laboriosam, aliquid autem repudiandae recusandae explicabo animi optio nulla, enim vel! Unde, odit sed!</p>
+            </div>
+            <div class="item">
+                <h1>Teste do Flexbox</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit minus nobis labore sequi eligendi voluptatem, ratione provident debitis minima iste laboriosam esse odio sunt mollitia rem, rerum explicabo distinctio ex! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos accusamus incidunt numquam nostrum sequi, rerum ipsa atque! Aperiam eius recusandae sequi dignissimos non aut labore fugit cupiditate! Dolorum, saepe delectus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt quam corrupti harum quae, id molestias numquam laboriosam, aliquid autem repudiandae recusandae explicabo animi optio nulla, enim vel! Unde, odit sed!</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
