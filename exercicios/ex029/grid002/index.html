@@ -8,11 +8,12 @@
         .container{
             border: 3px solid blue;
             display: grid;
-            grid-template: repeat(3, 100px) / 2fr 1fr 2fr;
+            grid-template: repeat(3, 100px) / repeat(4, 1fr) 1.5fr;
             gap: 10px;
 
-
-
+            grid-auto-flow: row;
+            grid-auto-rows: 100px;
+            grid-auto-columns: 1fr;
         }
 
         .item{
@@ -20,19 +21,33 @@
             background-color: lightblue;
             border: 1px dotted black;
         }
+
+        .d2{
+            grid-row: 1 / -1;
+            grid-column: 2 / 3;
+        }
+
+        .d5{
+            grid-row: 1 / -1;
+            grid-column: -1 / -2;
+        }
+
+        .d8{
+            grid-row: 2/4;
+            grid-column: 3/5;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="item">1</div>
-        <div class="item">2</div>
+        <div class="item d2">2</div>
         <div class="item">3</div>
         <div class="item">4</div>
-        <div class="item">5</div>
+        <div class="item d5">5</div>
         <div class="item">6</div>
         <div class="item">7</div>
-        <div class="item">8</div>
-        <div class="item">9</div>
+        <div class="item d8">8</div>
     </div>
 </body>
 </html>
