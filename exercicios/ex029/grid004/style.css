@@ -1,0 +1,61 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.layout{
+    height: 100vh;
+    display: grid;
+    grid-template: 70px calc(100vh - 70px) / 200px calc(100vw - 200px);
+}
+
+.sidebar{
+    background-color: lightgray;
+
+    grid-row: 1/3;
+    grid-column: 1/2;
+}
+
+.navbar{
+    background-color: lightblue;
+}        
+
+.main{
+    background-color: lightgoldenrodyellow;
+
+    display:grid;
+    grid-template: 1fr 0.3fr repeat(3, 2fr) / repeat(5, minmax(200px, 1fr));
+}
+
+@media (max-width: 600px){
+    .main{
+        grid-template-columns: 1fr;
+    }
+}
+
+.main div{
+    background-color: lightseagreen;
+    margin:10px;
+    border: 1px solid black;
+}
+
+.month{
+    grid-row: 1/3;
+    grid-column: -1/-2;
+}
+
+.spending{
+    grid-row:2/4;
+    grid-column: 1/5;
+}
+
+.budget{
+    grid-row: 3/5;
+    grid-column: -1/-2;
+}
+
+.recent{
+    grid-row: -1/-3;
+    grid-column: 1/-2;
+}
+

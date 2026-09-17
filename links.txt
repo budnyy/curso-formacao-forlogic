@@ -1,0 +1,6 @@
+dashboard: https://www.figma.com/make/jEWOO3hLqQLQGds2ud5uak/Financial-Dashboard-Design?t=rZo0a7NsHtwEK1X0-1
+
+ecommerce: https://www.figma.com/make/dhGiM5IE09xCZB38Xxn6ju/E-commerce-Product-Page-Design?t=53Q7ODViTUEH3sXs-1
+
+quizArena: https://www.figma.com/make/zwUaSgccSokpGYcycb5fr8/QuizArena-Game-Interface-Design?t=rZo0a7NsHtwEK1X0-1
+

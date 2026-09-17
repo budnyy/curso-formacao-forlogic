@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+
+    body{
+        background-color: aqua;
+    }
+    
+}
+
+
+@media screen and (min-width: 600px){
+    body{
+        background-color: lightblue;
+    }
+    
+    h1#dispositivo{
+        content: "Você está usando um celular";
+        
+    }
+}
+
+@media screen and (min-width: 768px){
+    body{
+        background-color: lightcoral;
+    }
+
+    h1#dispositivo{
+        content: "Você está usando um tablet";
+    }
+}
+
+@media screen and (min-width: 992px) {
+    body{
+        background-color: lightcyan;
+    }
+
+    h1#dispositivo{
+        content:"Você está em um desktop ou TV";
+    }
+}

@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+
+    grid-template: 50px 1fr / 1fr;
+
+    grid-template-areas: 
+        "navbar"
+        "main";
+}
+
+nav{
+    grid-area: navbar;
+
+    background-color: green;
+}
+
+main{
+    grid-area: main;
+
+    display: grid;
+
+    grid-template: 600px 300px 300px / 1fr 1fr;
+    
+    grid-template-areas: 
+        "images buy"
+        "info info"
+        "more more";
+
+    border: 3px solid black;
+    padding: 5px;
+}
+
+.images{
+    grid-area: images;
+    border: 3px solid black;
+    margin: 5px;
+}
+
+.buy{
+    grid-area: buy;
+    border: 3px solid black;
+    margin: 5px;
+}
+
+.info{
+    grid-area: info;
+    border: 3px solid black;
+    margin: 5px;
+}
+
+.more{
+    grid-area: more;
+    border: 3px solid black;
+    margin: 5px;
+}
