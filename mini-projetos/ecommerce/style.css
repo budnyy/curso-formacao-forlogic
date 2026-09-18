@@ -1,35 +1,93 @@
 @charset "UTF-8";
 
+/* tarefas a fazer
+- arrumar breakpoint da navbar
+- arrumar resolução imagens pequenas na maior viewport mobile
+*/
+
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body{
+    font-family: Arial, Helvetica, sans-serif;
+
     height: 100vh;
     display: grid;
 
-    grid-template: 50px 1fr / 1fr;
+    grid-template: 60px 1fr / 1fr;
 
     grid-template-areas: 
         "navbar"
         "main";
+
+    background-color: whitesmoke;
 }
+
+.container{
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* ============ NAVBAR ================ */
 
 nav{
     grid-area: navbar;
 
-    background-color: green;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
 }
+
+nav img{
+    height: 40px;
+    width: auto;
+    object-fit: cover;
+}
+
+.navContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftItems{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.leftItems > a{
+    color: #434343;
+}
+
+.leftItems > a:hover{
+    color: blue;
+}
+
+.rightItems{
+    display: flex;
+    align-items: center;
+}
+
+/* ============ MAIN ================ */
 
 main{
     grid-area: main;
 
     display: grid;
 
-    grid-template: 600px 300px 300px / 1fr 1fr;
+    grid-template: 40px 650px 300px 300px / 1fr 1fr;
     
     grid-template-areas: 
+        "breadcrumb breadcrumb"
         "images buy"
         "info info"
         "more more";
@@ -38,26 +96,236 @@ main{
     padding: 5px;
 }
 
-.images{
-    grid-area: images;
+/* ============ MOBILE CONFIG ================ */
+
+@media (max-width: 700px){
+    main{
+        grid-template: 40px 600px 600px 300px 300px / 1fr;
+
+        grid-template-areas: 
+        "breadcrumb"
+        "images"
+        "buy"
+        "info"
+        "more";
+
+    }
+
+    .mobileCollapse{
+        display: none;
+    }
+    
+}
+
+
+
+/* ============ BREADCRUMB SECTION ================ */
+
+.breadcrumb{
+    grid-area: breadcrumb;
+
     border: 3px solid black;
     margin: 5px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
+
+.breadcrumb > a, .breadcrumb > p{
+    color: #434343;
+}
+
+
+/* ============ IMAGES SECTION ================ */
+
+.images{
+    grid-area: images;
+
+    border: 3px solid black;
+    margin: 5px;
+
+    display: grid;
+    grid-template: auto 1fr / repeat(4, 1fr);
+
+    grid-template-areas: 
+        "bigImg bigImg bigImg bigImg"
+        "smallImg1 smallImg2 smallImg3 smallImg4";
+
+    gap: 5px;
+
+    align-content: start;
+    justify-items: center;
+}
+
+.bigImg{
+    grid-area: bigImg;
+}
+
+.bigImg > img{
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.smallImg > img{
+    width: 100%;
+    /* max-width: 100px; */
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.d1{
+    grid-area: smallImg1;
+}
+
+.d2{
+    grid-area: smallImg2;
+}
+
+.d3{
+    grid-area: smallImg3;
+}
+
+.d4{
+    grid-area: smallImg4;    
+}
+
+/* ============ BUY SECTION ================ */
 
 .buy{
     grid-area: buy;
     border: 3px solid black;
     margin: 5px;
+    padding: 5px;
+
+    display: grid;
+    grid-template: repeat(4, auto) / 1fr;
+    grid-template-areas: 
+        "header"
+        "info"
+        "options"
+        "benefits";
+
+    gap: 5px;
 }
+
+.buyHeader{
+    grid-area: header;
+}
+
+.buyInfo{
+    grid-area: info;
+}
+
+.buyOptions{
+    grid-area: options;
+
+    display: grid;
+
+    grid-template: 1fr 1fr / 1fr 3fr;
+    grid-template-areas: 
+        "amount addToCart"
+        "buyNow buyNow";
+
+}
+
+.buyOptions > input {
+    grid-area: amount;
+}
+
+.buyOptions #addToCart{
+    grid-area: addToCart;
+
+    background-color: blue;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+
+}
+
+.buyOptions #buyNow{
+    grid-area: buyNow;
+
+    background-color: black;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.buyBenefits{
+    grid-area: benefits;
+
+    display: grid;
+
+    grid-template: 1fr / repeat(3, 1fr);
+    grid-template-areas: "bnf1 bnf2 bnf3";
+}
+
+.bnf1{
+    grid-area: bnf1;
+}
+
+.bnf2{
+    grid-area: bnf2;
+}
+
+.bnf3{
+    grid-area: bnf3;
+}
+
+/* ============ INFO SECTION ================ */
 
 .info{
     grid-area: info;
     border: 3px solid black;
     margin: 5px;
+
+    display: grid;
+
+    grid-template: 50px 1fr / 1fr;
+    grid-template-areas: 
+        "infoSelector"
+        "allInfos";
 }
+
+.infoSelector{
+    grid-area: infoSelector;
+}
+
+.infoSelector > span{
+    margin: 5px 15px;
+}
+
+.allInfos{
+    grid-area: allInfos;
+}
+
+/* ============ MORE SECTION ================ */
 
 .more{
     grid-area: more;
     border: 3px solid black;
     margin: 5px;
+}
+
+.carousel{
+    display: flex;
+    gap: 16px;
+
+    overflow-x: auto;
+    padding: 10px;
+
+    scroll-snap-type: x mandatory;
+}
+
+.prodCard{
+    flex: 0 0 clamp(200px, 30vw, 350px);
+    
+    height: 200px;
+
+    scroll-snap-align: start;
+
+    background: lightblue;
+    border: 1px solid black;
 }

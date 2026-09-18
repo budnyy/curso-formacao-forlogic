@@ -8,39 +8,119 @@
 </head>
 <body>
     <nav>
-        <img src="" alt="logo">
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-        <input type="text" name="" id="">
-        <span></span>
-        <span></span>
+        <div class="container navContainer">
+            <div class="leftItems">
+                <img class="mobileCollapse" src="images/budny-store-logo.png" alt="logo" >
+                <a class="mobileCollapse" href="#">Laptops</a>
+                <a class="mobileCollapse" href="#">Phones</a>
+                <a class="mobileCollapse" href="#">Audio</a>
+                <a class="mobileCollapse" href="#">Wearables</a>
+                <a class="mobileCollapse" href="#">Accessories</a>
+                <input type="text" name="" id="">
+            </div>
+            <div class="rightItems">
+                <img src="images/person.svg" alt="person">
+                <img src="images/cart.svg" alt="cart">
+            </div>
+        </div>
     </nav>
-    <main>
+    
+    <main class="container">
+        <div class="breadcrumb">
+            <a href="">Home </a><span>/</span><a href="">Laptops</a><span>/</span><a href="">Esse aí</a>
+        </div>
         <section class="images">
-            <div class="bigImg"></div>
-            <div class="smallImg"></div>
-            <div class="smallImg"></div>
-            <div class="smallImg"></div>
-            <div class="smallImg"></div>
+            <div class="bigImg">
+                <img src="images/laptopmain.jpg" alt="laptop grande">
+            </div>
+            <div class="smallImg d1">
+                <img src="images/laptop1.jpg" alt="laptop pequeno 1">
+            </div>
+            <div class="smallImg d2">
+                <img src="images/laptop2.jpg" alt="laptop pequeno 2">
+            </div>
+            <div class="smallImg d3">
+                <img src="images/laptop3.jpg" alt="laptop pequeno 3">
+            </div>
+            <div class="smallImg d4">
+                <img src="images/laptop4.jpg" alt="laptop pequeno 4">
+            </div>
         </section>
         <section class="buy">
-            <div class="prodName"></div>
-            <div class="prodPrice"></div>
-            <div class="prodButtons"></div>
+            <div class="buyHeader">
+                <h1>Título</h1>
+                <div>
+                    <span>*****</span>
+                    <span>4,8</span>
+                    <span>2,341 reviews</span>
+                    <span>In Stock</span>
+                </div>
+                <div>
+                    <h1 id="price">$4000</h1>
+                    <span id="oldPrice">$4001</span>
+                    <span>Save $1</span>
+                </div>
+            </div>
+            <div class="buyInfo">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae sit libero tempore rem iusto fugit animi ratione quod autem saepe vel mollitia quia illum, ducimus ullam aspernatur natus sequi amet.</p>
+                <div class="colorSelector">
+                    <p>Color: </p>
+                    <!-- quadradinhos coloridos -->
+                </div>
+                <div class="specSelector">
+                    <p>Storage: </p>
+                    <!-- opções de storage -->
+                </div>
+            </div>
+            <div class="buyOptions">
+                <input type="number" name="amt" id="amt">
+                <a href="#" id="addToCart">Add to Cart</a>
+                <a href="#" id="buyNow">Buy Now</a>
+            </div>
+            <div class="buyBenefits">
+                <div class="bnf1">
+                    <h3>Free shipping</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="bnf2">
+                    <h3>30-day free return</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="bnf3">
+                    <h3>2 year warranty</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
         </section>
         <section class="info">
-            <section class="desc"></section>
-            <section class="specs"></section>
-            <section class="reviews"></section>
+            <div class="infoSelector">
+                <span>Description</span><span>Specifications</span><span>Reviews</span>
+            </div>
+            <div class="allInfos">
+                <section class="desc">
+                    <!-- flexbox -->
+                </section>
+                <section class="specs">
+                    <!-- tabela -->
+                </section>
+                <section class="reviews">
+                    <!-- não faço ideia -->
+                </section>
+            </div>
         </section>
-        <section class="more">
-            <article class="prodCard v1"></article>
-            <article class="prodCard v2"></article>
-            <article class="prodCard v3"></article>
-            <article class="prodCard v4"></article>
+        <section class="more carousel">
+            <article class="prodCard v1 smallImg">
+                <img src="images/headphone1.jpg" alt="">
+            </article>
+            <article class="prodCard v2 smallImg">
+                <img src="images/keyboard.jpg" alt="">
+            </article>
+            <article class="prodCard v3 smallImg">
+                <img src="images/smartwatch.jpg" alt="">
+            </article>
+            <article class="prodCard v4 smallImg">
+                <img src="images/headphone2.jpg" alt="">
+            </article>
         </section>
     </main>
 </body>
