@@ -1,0 +1,16 @@
+/* ============ BREADCRUMB SECTION ================ */
+
+.breadcrumb{
+    grid-area: breadcrumb;
+
+    /* border: 3px solid black; */
+    margin-top: 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.breadcrumb > a, .breadcrumb > p{
+    color: #434343;
+}

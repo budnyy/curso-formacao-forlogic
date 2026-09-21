@@ -1,0 +1,53 @@
+/* ============ IMAGES SECTION ================ */
+
+.images{
+    grid-area: images;
+
+    /* border: 3px solid black; */
+    margin: 5px;
+
+    display: grid;
+    grid-template: auto 1fr / repeat(4, 1fr);
+
+    grid-template-areas: 
+        "bigImg bigImg bigImg bigImg"
+        "smallImg1 smallImg2 smallImg3 smallImg4";
+
+    gap: 5px;
+
+    align-content: start;
+    justify-items: center;
+}
+
+.bigImg{
+    grid-area: bigImg;
+}
+
+.bigImg > img{
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.smallImg > img{
+    width: 100%;
+    /* max-width: 100px; */
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.d1{
+    grid-area: smallImg1;
+}
+
+.d2{
+    grid-area: smallImg2;
+}
+
+.d3{
+    grid-area: smallImg3;
+}
+
+.d4{
+    grid-area: smallImg4;    
+}

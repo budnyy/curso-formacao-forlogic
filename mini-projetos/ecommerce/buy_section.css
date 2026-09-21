@@ -1,0 +1,127 @@
+/* ============ BUY SECTION ================ */
+
+.buy{
+    grid-area: buy;
+    /* border: 3px solid black; */
+    margin: 5px;
+    padding: 5px;
+
+    display: grid;
+    grid-template: repeat(4, auto) / 1fr;
+    grid-template-areas: 
+        "header"
+        "info"
+        "options"
+        "benefits";
+
+    gap: 5px;
+}
+
+.buyHeader{
+    grid-area: header;
+}
+
+.buyHeader > div{
+    margin: 20px 0px;
+}
+
+.buyHeader > div > span{
+    margin: 0px 5px;
+}
+
+#stars{
+    color: blue;
+}
+
+#reviewAvg{
+    font-weight: bold;
+}
+
+#reviewAmt{
+    color: #434343;
+}
+
+#stockStatus{
+    color: green;
+}
+
+.buyInfo{
+    grid-area: info;
+}
+
+.buyOptions{
+    grid-area: options;
+
+    display: grid;
+
+    grid-template: 1fr 1fr / 1fr 3fr;
+    grid-template-areas: 
+        "amount addToCart"
+        "buyNow buyNow";
+
+    text-align: center;
+}
+
+.buyOptions > input {
+    grid-area: amount;
+
+    margin: 5px;
+    border: 1px solid #4343433f;
+}
+
+.buyOptions #addToCart{
+    grid-area: addToCart;
+
+    background-color: blue;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+
+    margin: 5px;
+
+    min-height: 45px;
+}
+
+.buyOptions #buyNow{
+    grid-area: buyNow;
+
+    background-color: black;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+
+    margin: 5px;
+}
+
+.buyBenefits{
+    grid-area: benefits;
+
+    display: grid;
+
+    grid-template: 1fr / repeat(3, 1fr);
+    grid-template-areas: "bnf1 bnf2 bnf3";
+}
+
+.bnf1{
+    grid-area: bnf1;
+    margin: 3px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #4343433f;
+}
+
+.bnf2{
+    grid-area: bnf2;
+    margin: 3px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #4343433f;
+}
+
+.bnf3{
+    grid-area: bnf3;
+    margin: 3px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #4343433f;
+}

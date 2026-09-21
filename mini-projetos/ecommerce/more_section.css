@@ -1,0 +1,76 @@
+/* ============ MORE SECTION ================ */
+
+.more{
+    grid-area: more;
+    /* border: 3px solid black; */
+    margin: 5px;
+}
+
+.carousel{
+    display: flex;
+    gap: 16px;
+
+    overflow-x: auto;
+    padding: 10px;
+
+    scroll-snap-type: x mandatory;
+}
+
+.prodCard{
+    flex: 0 0 clamp(200px, 30vw, 350px);
+    
+    height: 100%;
+
+    scroll-snap-align: start;
+
+    display: grid;
+    grid-template: max-content clamp(100px, 15vh, 200px)/ auto;
+    grid-template-areas: 
+        "image"
+        "content";
+
+    background: white;
+    border: 1px solid #4343433f;
+}
+
+.pCContent{
+    grid-area: content;
+    padding: 20px;
+
+    display: grid;
+    grid-template: repeat(2, auto)/ repeat(2, auto);
+    grid-template-areas: 
+        "title title"
+        "price button";
+}
+
+.prodCard > img{
+    grid-area: image;
+
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+.pCContent > h1{
+    grid-area: title;
+    
+}
+
+.pCContent > p{
+    grid-area: price;
+    font-size: 1.2em;
+}
+
+.pCContent > button{
+    grid-area: button;
+    
+    background-color: white;
+    border: 3px solid blue;
+    color: blue;
+}
+
+.pCContent > button:hover{
+    background-color: blue;
+    color: white;
+}

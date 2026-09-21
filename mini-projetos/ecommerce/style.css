@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 /* tarefas a fazer
-- arrumar breakpoint da navbar
-- arrumar resolução imagens pequenas na maior viewport mobile
+menu hamburguer
+troca de imagens da bigimage
 */
 
 *{
@@ -36,6 +36,10 @@ a{
     text-decoration: none;
 }
 
+.mobileOnly{
+    display: none;
+}
+
 /* ============ NAVBAR ================ */
 
 nav{
@@ -45,6 +49,8 @@ nav{
 
     display: flex;
     align-items: center;
+
+    padding: 10px;
 }
 
 nav img{
@@ -62,6 +68,16 @@ nav img{
     display: flex;
     align-items: center;
     gap: 15px;
+
+    flex-shrink: 1;
+}
+
+.leftItems input{
+    min-width: 0px;
+    flex-shrink: 1;
+    height: 30px;
+    background-color: whitesmoke;
+    border: 1px solid #4343433f;
 }
 
 .leftItems > a{
@@ -84,7 +100,7 @@ main{
 
     display: grid;
 
-    grid-template: 40px 650px 300px 300px / 1fr 1fr;
+    grid-template: 40px max-content max-content max-content / 1fr 1fr;
     
     grid-template-areas: 
         "breadcrumb breadcrumb"
@@ -92,15 +108,17 @@ main{
         "info info"
         "more more";
 
-    border: 3px solid black;
-    padding: 5px;
+    /* border: 3px solid black; */
+    padding: 10px;
+
+    gap: 15px;
 }
 
 /* ============ MOBILE CONFIG ================ */
 
-@media (max-width: 700px){
+@media (max-width: 771px){
     main{
-        grid-template: 40px 600px 600px 300px 300px / 1fr;
+        grid-template: 40px auto auto max-content auto / 1fr;
 
         grid-template-areas: 
         "breadcrumb"
@@ -109,223 +127,66 @@ main{
         "info"
         "more";
 
+        padding: 10px;
     }
 
     .mobileCollapse{
         display: none;
     }
+
+    .mobileOnly{
+        display: inline;
+    }
     
 }
 
+/* ============ SIDEBAR MENU ================ */
 
-
-/* ============ BREADCRUMB SECTION ================ */
-
-.breadcrumb{
-    grid-area: breadcrumb;
-
-    border: 3px solid black;
-    margin: 5px;
-
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.layer2{
+    z-index: 50;
 }
 
-.breadcrumb > a, .breadcrumb > p{
-    color: #434343;
+.layer3{
+    z-index: 100;
 }
 
+.bg-unfocus{
+    display: none;
 
-/* ============ IMAGES SECTION ================ */
-
-.images{
-    grid-area: images;
-
-    border: 3px solid black;
-    margin: 5px;
-
-    display: grid;
-    grid-template: auto 1fr / repeat(4, 1fr);
-
-    grid-template-areas: 
-        "bigImg bigImg bigImg bigImg"
-        "smallImg1 smallImg2 smallImg3 smallImg4";
-
-    gap: 5px;
-
-    align-content: start;
-    justify-items: center;
+    position: fixed;
+    background-color: #4343433f;
+    width: 100vw;
+    height: 100vh;
 }
 
-.bigImg{
-    grid-area: bigImg;
-}
-
-.bigImg > img{
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-}
-
-.smallImg > img{
-    width: 100%;
-    /* max-width: 100px; */
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-}
-
-.d1{
-    grid-area: smallImg1;
-}
-
-.d2{
-    grid-area: smallImg2;
-}
-
-.d3{
-    grid-area: smallImg3;
-}
-
-.d4{
-    grid-area: smallImg4;    
-}
-
-/* ============ BUY SECTION ================ */
-
-.buy{
-    grid-area: buy;
-    border: 3px solid black;
-    margin: 5px;
-    padding: 5px;
-
-    display: grid;
-    grid-template: repeat(4, auto) / 1fr;
-    grid-template-areas: 
-        "header"
-        "info"
-        "options"
-        "benefits";
-
-    gap: 5px;
-}
-
-.buyHeader{
-    grid-area: header;
-}
-
-.buyInfo{
-    grid-area: info;
-}
-
-.buyOptions{
-    grid-area: options;
-
-    display: grid;
-
-    grid-template: 1fr 1fr / 1fr 3fr;
-    grid-template-areas: 
-        "amount addToCart"
-        "buyNow buyNow";
-
-}
-
-.buyOptions > input {
-    grid-area: amount;
-}
-
-.buyOptions #addToCart{
-    grid-area: addToCart;
-
-    background-color: blue;
-    color: white;
-    padding: 3px;
-    border-radius: 5px;
-
-}
-
-.buyOptions #buyNow{
-    grid-area: buyNow;
-
-    background-color: black;
-    color: white;
-    padding: 3px;
-    border-radius: 5px;
-}
-
-.buyBenefits{
-    grid-area: benefits;
-
-    display: grid;
-
-    grid-template: 1fr / repeat(3, 1fr);
-    grid-template-areas: "bnf1 bnf2 bnf3";
-}
-
-.bnf1{
-    grid-area: bnf1;
-}
-
-.bnf2{
-    grid-area: bnf2;
-}
-
-.bnf3{
-    grid-area: bnf3;
-}
-
-/* ============ INFO SECTION ================ */
-
-.info{
-    grid-area: info;
-    border: 3px solid black;
-    margin: 5px;
-
-    display: grid;
-
-    grid-template: 50px 1fr / 1fr;
-    grid-template-areas: 
-        "infoSelector"
-        "allInfos";
-}
-
-.infoSelector{
-    grid-area: infoSelector;
-}
-
-.infoSelector > span{
-    margin: 5px 15px;
-}
-
-.allInfos{
-    grid-area: allInfos;
-}
-
-/* ============ MORE SECTION ================ */
-
-.more{
-    grid-area: more;
-    border: 3px solid black;
-    margin: 5px;
-}
-
-.carousel{
-    display: flex;
-    gap: 16px;
-
-    overflow-x: auto;
-    padding: 10px;
-
-    scroll-snap-type: x mandatory;
-}
-
-.prodCard{
-    flex: 0 0 clamp(200px, 30vw, 350px);
+.menu{
+    background-color: rgb(0, 0, 61);
     
-    height: 200px;
+    display: none;
+    flex-flow: column nowrap;
 
-    scroll-snap-align: start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
 
-    background: lightblue;
-    border: 1px solid black;
+    padding: 15px;
 }
+
+.menu > a{
+    color: rgb(234, 234, 234);
+    border-top: 1px solid white;
+
+    padding: 15px;
+}
+
+.sidebarTop {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebarTop > img{
+    height: 40px;
+}
+

@@ -1,0 +1,50 @@
+/* ============ INFO SECTION ================ */
+
+.info{
+    grid-area: info;
+    /* border: 3px solid black; */
+    margin: 5px;
+
+    display: grid;
+
+    grid-template: 50px 1fr / 1fr;
+    grid-template-areas: 
+        "infoSelector"
+        "allInfos";
+}
+
+.infoSelector{
+    grid-area: infoSelector;
+    display: flex;
+    align-items: center;
+
+    border-top: 1px solid #4343433f;
+    border-bottom: 1px solid #4343433f;
+}
+
+.infoSelector > span{
+    margin: 5px 15px;
+    color: #4343433f;
+}
+
+.infoSelector > span:hover{
+    color: black;
+}
+
+.infoSelector > span:active{
+    color: black;    
+
+}
+
+.allInfos{
+    grid-area: allInfos;
+    padding: 10px;
+}
+
+.specs{
+    display: none;
+}
+
+.reviews{
+    display: none;
+}

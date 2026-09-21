@@ -1,22 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecommerce att 01</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="breadcrumb_section.css">
+    <link rel="stylesheet" href="buy_section.css">
+    <link rel="stylesheet" href="images_section.css">
+    <link rel="stylesheet" href="info_section.css">
+    <link rel="stylesheet" href="more_section.css">
 </head>
-<body>
+<body onload="setup()">
+    <section class="layer2 bg-unfocus">
+        <div class="layer3 menu">
+            <div class="sidebarTop">
+                <img onclick="toggleMenu()" src="images/close_branco.svg" alt="close">
+                <img src="images/budny-store-logo.png" alt="logo">
+            </div>
+            <a href="">Laptops</a>
+            <a href="">Phones</a>
+            <a href="">Audio</a>
+            <a href="">Wearables</a>
+            <a href="">Accessories</a>
+            <a href="">View All</a>
+        </div>
+    </section>
+
     <nav>
         <div class="container navContainer">
             <div class="leftItems">
-                <img class="mobileCollapse" src="images/budny-store-logo.png" alt="logo" >
+                <img class="mobileOnly menuButton" onclick="toggleMenu()" src="images/menu.svg" alt="menu">
+                <img src="images/budny-store-logo.png" alt="logo" >
                 <a class="mobileCollapse" href="#">Laptops</a>
                 <a class="mobileCollapse" href="#">Phones</a>
                 <a class="mobileCollapse" href="#">Audio</a>
                 <a class="mobileCollapse" href="#">Wearables</a>
                 <a class="mobileCollapse" href="#">Accessories</a>
-                <input type="text" name="" id="">
+                <input type="text" name="search" id="search" placeholder="Search products...">
             </div>
             <div class="rightItems">
                 <img src="images/person.svg" alt="person">
@@ -34,31 +55,29 @@
                 <img src="images/laptopmain.jpg" alt="laptop grande">
             </div>
             <div class="smallImg d1">
-                <img src="images/laptop1.jpg" alt="laptop pequeno 1">
+                <img onclick="focusImage(0)" src="images/laptop1.jpg" alt="laptop pequeno 1">
             </div>
-            <div class="smallImg d2">
-                <img src="images/laptop2.jpg" alt="laptop pequeno 2">
+            <div class="smallImg d2" >
+                <img onclick="focusImage(1)" src="images/laptop2.jpg" alt="laptop pequeno 2">
             </div>
-            <div class="smallImg d3">
-                <img src="images/laptop3.jpg" alt="laptop pequeno 3">
+            <div class="smallImg d3" >
+                <img onclick="focusImage(2)" src="images/laptop3.jpg" alt="laptop pequeno 3">
             </div>
-            <div class="smallImg d4">
-                <img src="images/laptop4.jpg" alt="laptop pequeno 4">
+            <div class="smallImg d4" >
+                <img onclick="focusImage(3)" src="images/laptop4.jpg" alt="laptop pequeno 4">
             </div>
         </section>
         <section class="buy">
             <div class="buyHeader">
-                <h1>Título</h1>
+                <h1>Laptop insano</h1>
                 <div>
-                    <span>*****</span>
-                    <span>4,8</span>
-                    <span>2,341 reviews</span>
-                    <span>In Stock</span>
+                    <span id="stars">*****</span>
+                    <span id="reviewAvg">4,8</span>
+                    <span id="reviewAmt">2,341 reviews</span>
+                    <span id="stockStatus">In Stock</span>
                 </div>
                 <div>
                     <h1 id="price">$4000</h1>
-                    <span id="oldPrice">$4001</span>
-                    <span>Save $1</span>
                 </div>
             </div>
             <div class="buyInfo">
@@ -74,8 +93,8 @@
             </div>
             <div class="buyOptions">
                 <input type="number" name="amt" id="amt">
-                <a href="#" id="addToCart">Add to Cart</a>
-                <a href="#" id="buyNow">Buy Now</a>
+                <button href="#" id="addToCart">Add to Cart</button>
+                <button href="#" id="buyNow">Buy Now</button>
             </div>
             <div class="buyBenefits">
                 <div class="bnf1">
@@ -94,34 +113,154 @@
         </section>
         <section class="info">
             <div class="infoSelector">
-                <span>Description</span><span>Specifications</span><span>Reviews</span>
+                <span id="descSel" onclick="toggleInfo(0)">Description</span><span id="specsSel" onclick="toggleInfo(1)">Specifications</span><span id="reviewsSel" onclick="toggleInfo(2)">Reviews</span>
             </div>
             <div class="allInfos">
                 <section class="desc">
                     <!-- flexbox -->
+                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci illo necessitatibus doloribus deleniti non quos reiciendis vel repellendus, repellat, cumque modi aliquam explicabo ipsa ad voluptates laudantium. A, obcaecati odit.</p>
                 </section>
                 <section class="specs">
                     <!-- tabela -->
+                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur vitae eius cumque nisi voluptates distinctio eos voluptatem enim porro, blanditiis nemo labore vero maxime, magnam, nesciunt saepe dignissimos consequatur mollitia. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio consequuntur aspernatur animi obcaecati, commodi itaque illo adipisci, unde incidunt non quis, vero porro repellat. Consectetur at cupiditate nobis a iusto?</p>
                 </section>
                 <section class="reviews">
                     <!-- não faço ideia -->
+                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum possimus odio voluptatem eligendi iste consequuntur sit quod, quas veniam officia inventore laudantium asperiores, pariatur cupiditate accusamus corrupti, voluptate aliquid ratione?Lorem ipsum dolorLorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum possimus odio voluptatem eligendi iste consequuntur sit quod, quas veniam officia inventore laudantium asperiores, pariatur cupiditate accusamus corrupti, voluptate aliquid ratione?Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo tenetur id velit nihil, iste magni eligendi quos obcaecati iure nemo quidem quia ex eaque. Provident esse vero fugiat placeat odit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, vero? Ex optio natus laboriosam perferendis voluptatibus facilis, veritatis error earum nesciunt repudiandae obcaecati ipsa ipsum nisi blanditiis delectus quia sapiente.ia sapiente.</p>
                 </section>
             </div>
         </section>
         <section class="more carousel">
-            <article class="prodCard v1 smallImg">
+            <article class="prodCard v1">
                 <img src="images/headphone1.jpg" alt="">
+                <div class="pCContent">    
+                    <h1>Título</h1>
+                    <p>$400</p>
+                    <button>Add</button>
+                </div>
             </article>
-            <article class="prodCard v2 smallImg">
+            <article class="prodCard v2">
                 <img src="images/keyboard.jpg" alt="">
+                <div class="pCContent">    
+                    <h1>Título</h1>
+                    <p>$400</p>
+                    <button>Add</button>
+                </div>
             </article>
-            <article class="prodCard v3 smallImg">
+            <article class="prodCard v3">
                 <img src="images/smartwatch.jpg" alt="">
+                <div class="pCContent">
+                    <h1>Título</h1>
+                    <p>$400</p>
+                    <button>Add</button>
+                </div>
             </article>
-            <article class="prodCard v4 smallImg">
+            <article class="prodCard v4">
                 <img src="images/headphone2.jpg" alt="">
+                <div class="pCContent">
+                    <h1>Título</h1>
+                    <p>$400</p>
+                    <button>Add</button>
+                </div>
             </article>
         </section>
     </main>
+
+
+
+    <script>
+        function setup(){
+            toggleInfo(0)
+            focusImage(0)
+        }
+
+        function toggleInfo(info){
+            var desc = document.getElementsByClassName('desc')[0]
+            var specs = document.getElementsByClassName('specs')[0]
+            var reviews = document.getElementsByClassName('reviews')[0]
+            
+            reviews.style.display = 'none'
+            desc.style.display = 'none'
+            specs.style.display = 'none'
+
+            highlightSelector(info)
+
+            switch(info){
+                case 0:
+                    desc.style.display = 'block'
+                    break
+                case 1:
+                    specs.style.display = 'block'
+                    break
+                case 2:
+                    reviews.style.display = 'block'
+                    break
+                default:
+                    break
+            }
+        }
+
+        function highlightSelector(info){
+            var descSel = document.getElementById('descSel')
+            var specsSel = document.getElementById('specsSel')
+            var reviewsSel = document.getElementById('reviewsSel')
+
+            descSel.style.borderBottom = 'none'
+            descSel.style.color = '#434343af'
+
+            specsSel.style.borderBottom = 'none'
+            specsSel.style.color = '#434343af'
+
+            reviewsSel.style.borderBottom = 'none'
+            reviewsSel.style.color = '#434343af'
+
+            switch(info){
+                case 0:
+                    descSel.style.borderBottom = '2px solid blue'
+                    descSel.style.color = 'black'
+                    break
+                case 1:
+                    specsSel.style.borderBottom = '2px solid blue'
+                    specsSel.style.color = 'black'
+                    break
+                case 2:
+                    reviewsSel.style.borderBottom = '2px solid blue'
+                    reviewsSel.style.color = 'black'
+                    break
+                default:
+                    break
+            }
+        }
+
+        function toggleMenu(){
+            var menu = document.getElementsByClassName('menu')[0]
+            var bg = document.getElementsByClassName('bg-unfocus')[0]
+
+            if(menu.style.display === 'none'){
+                menu.style.display = 'flex'
+                bg.style.display = 'block'
+            } else {
+                menu.style.display = 'none'
+                bg.style.display = 'none'
+            }
+
+        }
+
+        function focusImage(img){
+            var images = document.querySelectorAll('.smallImg img')
+            var bigImage = document.querySelectorAll('.bigImg img')[0]
+
+            bigImage.src = images[img].src
+            
+            for(var i = 0; i < images.length; i++){
+                images[i].style.border = 'none'
+            }
+            
+            images[img].style.border = '2px solid blue'
+
+
+        }
+        
+    </script>
 </body>
 </html>
