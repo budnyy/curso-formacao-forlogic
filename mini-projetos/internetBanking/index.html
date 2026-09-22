@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Banking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="setup()">
+    <section class="logo">
+        <h1>fini</h1>
+    </section>
+    <nav>
+        <div class="leftItems">
+            <div class="hello">
+                <p id="date">today</p>
+                <h2>Olá, Arthur</h2>
+            </div>
+        </div>
+        <div class="rightItems">
+            <div class="notifications">
+                <p>F</p>
+            </div>
+            <div class="userAcount">
+                <p>Arthur Budny</p>
+            </div>
+        </div>
+    </nav>
+    <aside>
+        <div class="topItems">
+            <p class="sectionTitle">Menu</p>
+            <div class="sidebarOption">
+                <img src="" alt="">
+                <p>Início</p>
+            </div>
+            <div class="sidebarOption">
+                <img src="" alt="">
+                <p>Extrato</p>
+            </div>
+            <div class="sidebarOption">
+                <img src="" alt="">
+                <p>Transferências</p>
+            </div>
+            <div class="sidebarOption">
+                <img src="" alt="">
+                <p>Cartões</p>
+            </div>
+        </div>
+        <div class="bottomItems">
+            <div class="sidebarOption">
+                <img src="" alt="">
+                <p>Ajuda</p>
+            </div>
+            <div class="sidebarOption">
+                <img src="" alt="">
+                <p>Configurações</p>
+            </div>
+            <hr>
+            <div class="userAccount">
+                <p>Arthur Budny</p>
+            </div>
+        </div>
+    </aside>
+    <main class="container">
+        <section class="balance c">
+            <div class="l1">
+                <h2>Saldo disponível</h2>
+                <div id="visButton">
+                    <img class="visibility" src="icons/visibility_gray.svg" alt="toggle privacy">
+                </div>
+            </div>
+            <h1 class="l2 censored">R$24.800,00</h1>
+            <div class="l3">
+                <p>Rendendo <span class="censored">100%</span> do CDI</p>
+                <a href="#">Ver detalhes ></a>
+            </div>
+        </section>
+        <section class="quickActions">
+            <p class="sectionTitle">Ações Rápidas</p>
+            <div class="actionsContainer">
+                <button class="qa b1 c">Pix</button>
+                <button class="qa b2 c">Transferir</button>
+                <button class="qa b3 c">Pagar Contas</button>
+                <button class="qa b4 c">Depositar</button>
+                <button class="qa b5 c">Cartões</button>
+                <button class="qa b6 c">Extratos</button>
+            </div>
+        </section>
+        <section class="balanceChart c">
+            <p class="sectionTitle">Visão Geral</p>
+            <h1>gráfico gigante</h1>
+        </section>
+        <section class="card c">
+            <p class="sectionTitle">Meu Cartão</p>
+        </section>
+        <section class="recentTransactions c">
+            <p class="sectionTitle">Transações Recentes</p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

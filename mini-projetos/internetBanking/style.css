@@ -1,0 +1,214 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    display: grid;
+    
+    grid-template: 70px 1fr / 200px 1fr;
+    grid-template-areas: 
+        "logo navbar"
+        "sidebar main";
+    
+    height: 100vh;
+    background-color: whitesmoke;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.logo{
+    grid-area: logo;
+    background-color: #090909;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionTitle{
+    color: gray;
+    font-size: 0.7em;
+
+    margin: 5px;
+}
+
+a{
+    color: white;
+}
+
+a:hover{
+    color: grey;
+}
+
+/* ================== NAVBAR ================== */
+
+nav{
+    grid-area: navbar;
+    background-color: white;
+    border-bottom: 1px solid rgb(229, 228, 228);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.rightItems{
+    display: flex;
+}
+
+
+
+/* ================== MAIN ================== */
+
+main{
+    grid-area: main;
+
+    display: grid;
+    grid-template: repeat(4, max-content) / 2fr 1fr;
+    grid-template-areas: 
+        "balance balance"
+        "quickActions quickActions"
+        "chart card"
+        "recent .";
+    
+    gap: 25px;
+    padding: 20px;
+}
+
+/* component */
+.c{
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid rgb(229, 228, 228);
+}
+
+.balance{
+    grid-area: balance;
+
+    display: grid;
+
+    grid-template: repeat(3, max-content) /1fr;
+    grid-template-areas:
+        "title"
+        "value"
+        "details";
+
+    background-color: #090909;
+    color: white;
+}
+
+.l1{
+    grid-area: title;
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+#visButton{
+    background-color: #090909;
+    border: 1px solid #434343;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.l2{
+    grid-area: value;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    font-size: 3em;
+}
+
+.l3{
+    grid-area: details;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.quickActions{
+    grid-area: quickActions;
+}
+
+.qa{
+    flex:1;
+}
+
+.qa:hover{
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.225);
+}
+
+.actionsContainer{
+    display:grid;
+
+    grid-template: 50px / repeat(6, 1fr);
+    gap: 10px;
+}
+
+.balanceChart{
+    grid-area: chart;
+}
+
+.card{
+    grid-area: card;
+}
+
+.recentTransactions{
+    grid-area: recent;
+}
+
+/* ================== SIDEBAR ==================== */
+
+aside{
+    grid-area: sidebar;
+    background-color: #090909;
+    color: grey;
+    padding: 15px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.sidebarOption{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 12px;
+    margin: 5px;
+
+    border-radius: 5px;
+
+    font-size: 0.8em;
+}
+
+.sidebarOption:hover{
+    background-color: rgb(21, 21, 21);
+    color: white;
+}
+
+.userAccount{
+    padding: 12px;
+    margin: 5px;
+
+    border-radius: 5px;
+}

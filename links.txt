@@ -2,5 +2,5 @@ dashboard: https://www.figma.com/make/jEWOO3hLqQLQGds2ud5uak/Financial-Dashboard
 
 ecommerce: https://www.figma.com/make/dhGiM5IE09xCZB38Xxn6ju/E-commerce-Product-Page-Design?t=53Q7ODViTUEH3sXs-1
 
-quizArena: https://www.figma.com/make/zwUaSgccSokpGYcycb5fr8/QuizArena-Game-Interface-Design?t=rZo0a7NsHtwEK1X0-1
+internetBanking: https://www.figma.com/make/m4zLsJcwe4ez54oybBNjoM/Design-p%C3%A1gina-inicial-Internet-Banking?fullscreen=1&t=4m9zKLgqilJLutnU-1&code-node-id=0-6
 
