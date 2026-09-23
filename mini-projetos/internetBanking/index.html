@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body onload="setup()">
-    <section class="logo">
-        <h1>fini</h1>
+    <section class="logo mobileCollapse">
+        <h1>fin</h1>
     </section>
     <nav>
         <div class="leftItems">
-            <div class="hello">
+            <div class="hello mobileCollapse">
                 <p id="date">today</p>
                 <h2>Olá, Arthur</h2>
             </div>
@@ -26,33 +26,33 @@
             </div>
         </div>
     </nav>
-    <aside>
+    <aside class="mobileCollapse">
         <div class="topItems">
             <p class="sectionTitle">Menu</p>
-            <div class="sidebarOption">
-                <img src="" alt="">
+            <div class="activeSBOption">
+                <img src="icons/home_black.svg" alt="">
                 <p>Início</p>
             </div>
             <div class="sidebarOption">
-                <img src="" alt="">
+                <img src="icons/bar_chart_gray.svg" alt="">
                 <p>Extrato</p>
             </div>
             <div class="sidebarOption">
-                <img src="" alt="">
+                <img src="icons/compare_arrows_gray.svg" alt="">
                 <p>Transferências</p>
             </div>
             <div class="sidebarOption">
-                <img src="" alt="">
+                <img src="icons/credit_card_gray.svg" alt="">
                 <p>Cartões</p>
             </div>
         </div>
         <div class="bottomItems">
             <div class="sidebarOption">
-                <img src="" alt="">
+                <img src="icons/help_gray.svg" alt="">
                 <p>Ajuda</p>
             </div>
             <div class="sidebarOption">
-                <img src="" alt="">
+                <img src="icons/settings_gray.svg" alt="">
                 <p>Configurações</p>
             </div>
             <hr>
@@ -88,15 +88,40 @@
         </section>
         <section class="balanceChart c">
             <p class="sectionTitle">Visão Geral</p>
-            <h1>gráfico gigante</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit voluptatum laborum quas et, culpa excepturi expedita quidem nesciunt aspernatur, commodi maxime sapiente! Aliquid, sed beatae! Iste molestias eaque laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, reiciendis eos enim hic laboriosam eveniet aspernatur officiis sit veniam tempora provident, dolores dignissimos qui accusamus rem accusantium perferendis illum iusto.</p>
         </section>
         <section class="card c">
             <p class="sectionTitle">Meu Cartão</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero earum quaerat accusantium harum consequuntur, omnis cupiditate ut dignissimos. Voluptas dolores autem quas voluptatem nemo optio aperiam corrupti rerum id distinctio?</p>
         </section>
         <section class="recentTransactions c">
             <p class="sectionTitle">Transações Recentes</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ad voluptate magni quam, dolorum voluptatem animi vitae eligendi iusto numquam laborum rem adipisci beatae odit repellendus? Similique perferendis eos itaque Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero obcaecati doloribus veritatis consequatur, doloremque, sunt unde dicta perspiciatis possimus suscipit pariatur voluptates maxime dolorem fugiat ut temporibus architecto odio maiores. </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ad voluptate magni quam, dolorum voluptatem animi vitae eligendi iusto numquam laborum rem adipisci beatae odit repellendus? Similique perferendis eos itaque Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero obcaecati doloribus veritatis consequatur, doloremque, sunt unde dicta perspiciatis possimus suscipit pariatur voluptates maxime dolorem fugiat ut temporibus architecto odio maiores.</p>
         </section>
     </main>
+    <section class="mobNavbar mobileOnly">
+        <div class="mnbButton">
+            <img src="icons/home_gray.svg" alt="">
+            <p>Início</p>
+        </div>
+        <div class="mnbButton">
+            <img src="icons/bar_chart_gray.svg" alt="">
+            <p>Extrato</p>
+        </div>
+        <div class="mnbButton big">
+            <img src="icons/visibility_off_gray.svg" alt="">
+            <p>Pix</p>
+        </div>
+        <div class="mnbButton">
+            <img src="icons/credit_card_gray.svg" alt="">
+            <p>Cartões</p>
+        </div>
+        <div class="mnbButton">
+            <img src="icons/settings_gray.svg" alt="">
+            <p>Config.</p>
+        </div>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>

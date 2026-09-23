@@ -1,8 +1,13 @@
 @charset "UTF-8";
 
 *{
+    box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+}
+
+.mobileOnly{
+    display: none;
 }
 
 body{
@@ -27,11 +32,15 @@ body{
 
 .logo{
     grid-area: logo;
-    background-color: #090909;
+    background-color: #111111;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: fixed;
+    width: 200px;
+    height: 70px;
 }
 
 .sectionTitle{
@@ -68,6 +77,13 @@ nav{
     display: flex;
 }
 
+.hello{
+    font-size: 0.8em;
+}
+
+.hello > h2{
+    font-weight: normal;
+}
 
 
 /* ================== MAIN ================== */
@@ -76,19 +92,20 @@ main{
     grid-area: main;
 
     display: grid;
-    grid-template: repeat(4, max-content) / 2fr 1fr;
+    grid-template: repeat(4, max-content) / minmax(0, 2fr) minmax(0, 1fr);
     grid-template-areas: 
         "balance balance"
         "quickActions quickActions"
         "chart card"
         "recent .";
     
-    gap: 25px;
     padding: 20px;
+    gap: 25px;
 }
 
 /* component */
 .c{
+    min-width: none;
     background-color: white;
     border-radius: 12px;
     padding: 20px;
@@ -106,7 +123,7 @@ main{
         "value"
         "details";
 
-    background-color: #090909;
+    background-color: #111111;
     color: white;
 }
 
@@ -115,10 +132,16 @@ main{
     
     display: flex;
     justify-content: space-between;
+
+    font-size: 0.8em;
+}
+
+.l1 > h2{
+    font-weight: normal;
 }
 
 #visButton{
-    background-color: #090909;
+    background-color: #111111;
     border: 1px solid #434343;
     height: 30px;
     width: 30px;
@@ -142,6 +165,16 @@ main{
 
     display: flex;
     justify-content: space-between;
+
+    font-size: 0.8em;
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 85px;
 }
 
 .quickActions{
@@ -179,13 +212,18 @@ main{
 
 aside{
     grid-area: sidebar;
-    background-color: #090909;
+    background-color: #111111;
     color: grey;
     padding: 15px;
 
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
+
+    position: fixed;
+    height: calc(100vh - 70px);
+    align-self: flex-end;
+    width: 200px;
 }
 
 .sidebarOption{
@@ -206,9 +244,156 @@ aside{
     color: white;
 }
 
+.activeSBOption{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 12px;
+    margin: 5px;
+
+    border-radius: 5px;
+
+    font-size: 0.8em;
+
+    background-color: greenyellow;
+    color: #111111;
+}
+
 .userAccount{
     padding: 12px;
     margin: 5px;
 
     border-radius: 5px;
+}
+
+/* ==================== MEDIA QUERIES ==================== */
+
+@media (max-width: 825px){
+    .actionsContainer{
+        display: grid;
+
+        grid-template: 50px 50px / repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    body{
+        display: grid;
+        
+        grid-template: 70px 1fr / 170px 1fr;
+        grid-template-areas: 
+            "logo navbar"
+            "sidebar main";
+        
+        height: 100vh;
+        background-color: whitesmoke;
+
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    main{
+        grid-area: main;
+
+        display: grid;
+        grid-template: repeat(5, max-content) / 1fr;
+        grid-template-areas: 
+            "balance"
+            "quickActions"
+            "chart"
+            "recent"
+            "card";
+        
+        padding: 20px;
+        gap: 25px;
+    }
+
+    aside{
+        width: 170px;
+    }
+
+    .logo{
+        width: 170px;
+    }
+}
+
+@media (max-width: 568px){
+    .mobileOnly{
+        display: block;
+    }
+
+    .mobileCollapse{
+        display: none;
+    }
+
+    body{
+        display: grid;
+        
+        grid-template: 50px 1fr / 1fr;
+        grid-template-areas: 
+            "navbar"
+            "main";
+        
+        height: 100vh;
+        background-color: whitesmoke;
+
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    nav{
+        background-color: #111111;
+        color: white;
+    }
+
+    .mobNavbar{
+        position: fixed;
+        height: 50px;
+        width: 100%;
+        align-self: flex-end;
+
+        background-color: #111111;
+        color: white;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .mnbButton{
+        display: flex;
+        flex-flow: column nowrap;
+
+        justify-content: center;
+        text-align: center;
+        font-size: 0.4em;
+    }
+
+    .balance{
+        border: none;
+        border-radius: 0px 0px 12px 12px;
+    }
+
+    .quickActions, .balanceChart, .recentTransactions, .card{
+        margin: 0 20px;
+    }
+
+    main{
+        grid-area: main;
+
+        display: grid;
+        grid-template: repeat(5, max-content) / 1fr;
+        grid-template-areas: 
+            "balance"
+            "quickActions"
+            "chart"
+            "recent"
+            "card";
+
+        padding: 0px;
+    }
+
+    .container{
+        max-width: 1000px;
+        width: 100%;
+        margin: 0;
+    }
 }
