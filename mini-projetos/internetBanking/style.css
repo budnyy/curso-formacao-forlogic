@@ -237,6 +237,8 @@ aside{
     border-radius: 5px;
 
     font-size: 0.8em;
+
+    gap: 5px;
 }
 
 .sidebarOption:hover{
@@ -245,17 +247,6 @@ aside{
 }
 
 .activeSBOption{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
-    padding: 12px;
-    margin: 5px;
-
-    border-radius: 5px;
-
-    font-size: 0.8em;
-
     background-color: greenyellow;
     color: #111111;
 }
